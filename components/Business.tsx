@@ -53,10 +53,10 @@ const Business = () => {
       
         <div className="text-center mb-12">
           <h2 className="mb-4">
-              Atendimento para Empresas
+            Escolha o modelo que mais combina com você
           </h2>
           <p className="text-xl text-primary-foreground/90 max-w-3xl mx-auto">
-              Oferecemos planos corporativos e parcerias B2B, ideais para empresas que utilizam grande volume de notebooks.
+              Temos templates para diversos setores: Lojas, Prestadores de Serviço, Gastronomia e muito mais.
             </p>
         </div>       
         

@@ -36,14 +36,14 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-20">
+    <section className="py-20" style={{ background: `url(${process.env.NEXT_PUBLIC_BASE_PATH || ''}/new-landing-parallax.jpg) no-repeat top center; background-size: cover;` }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-foreground mb-4">
+          <h2 className="text-white mb-4">
             Depoimentos de Clientes
           </h2>
           <div className="h-1 w-24 bg-accent mx-auto mb-6" />
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-white max-w-2xl mx-auto">
             Veja o que nossos clientes dizem sobre nossos serviços
           </p>
         </div>

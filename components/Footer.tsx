@@ -2,7 +2,7 @@ import { Phone, Clock } from "lucide-react";
 
 const Footer = () => {
     return (
-        <footer className="bg-[var(--darkblue)] text-white pt-4">
+        <footer className="bg-gray-900 text-white pt-4">
 
             <div className="max-w-7xl mx-auto mt-12 px-4 sm:px-6 lg:px-8 portrait:text-center">
                 <div className="flex justify-between portrait:flex-col portrait:items-center portrait:gap-4 text-center">

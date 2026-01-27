@@ -7,23 +7,23 @@ const Features = () => {
   const benefits = [
     {
       icon: AlertCircle,
-      title: "Evita superaquecimento",
-      description: "A poeira acumulada impede a ventilação, causando lentidão e danos à placa-mãe."
+      title: "Aumente suas Vendas",
+      description: "Um site profissional pode render até 20% a mais de faturamento."
     },
     {
       icon: TrendingUp,
-      title: "Aumenta a vida útil",
-      description: "Limpezas periódicas e troca da pasta térmica reduzem o desgaste interno."
+      title: "Presença 24h",
+      description: "Sua vitrine aberta para o mundo, mesmo quando você está descansando."
     },
     {
       icon: ShieldCheck,
-      title: "Melhora o desempenho",
-      description: "Um sistema limpo e otimizado roda mais rápido e com menos travamentos."
+      title: "Mais profissionalismo",
+      description: "Pare de usar árvores de links genéricas. Leve seu cliente para sua própria casa digital."
     }
   ];
 
   return (
-    <section className="py-20 bg-neongreen">
+    <section className="py-20 bg-slate-50">
       <div className="container mx-auto px-4">        
            
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

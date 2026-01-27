@@ -1,0 +1,42 @@
+'use client';
+import { Lightbulb } from "lucide-react";
+import { motion } from "framer-motion";
+
+const ExpertTip = () => {
+  return (
+    <section className="py-16 bg-accent/5">
+      <div className="container mx-auto px-4">
+        <div className="max-w-5xl mx-auto">
+
+
+        <motion.div             
+            initial={{ opacity: 0, y: 120 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="bg-gradient-to-br from-accent/10 to-primary/5 rounded-2xl p-8 md:p-12 border-2 border-accent/20 shadow-lg"
+          >             
+          
+            <div className="flex items-center gap-4 portrait:flex-col">
+              <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center flex-shrink-0">
+                <Lightbulb className="w-8 h-8 text-accent" />
+              </div>
+              <div>                
+                <blockquote className="text-lg text-foreground italic border-l-4 border-accent pl-4">
+                  <h3 className="text-2xl font-bold text-primary mb-4 flex items-center gap-2">
+                    Dica do Especialista
+                  </h3>
+                  <p>"A limpeza preventiva e a troca da pasta térmica a cada 12 meses aumentam 
+                  significativamente a vida útil do seu notebook."</p>
+                </blockquote>
+              </div>
+            </div>
+         
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ExpertTip;

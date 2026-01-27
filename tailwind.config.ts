@@ -18,14 +18,18 @@ export default {
     },
     extend: {
       fontFamily: {
+        roboto: ['Roboto', 'sans-serif'],
         pacifico: ['Pacifico', 'cursive'],
-        bowlby: ['Bowlby One', 'cursive'],
+        bowlby: ['Bowlby One', 'sans-serif'],
+        bowlbysc: ['Bowlby One SC', 'sans-serif'],
       },
       colors: {
         deepblue: "hsl(var(--deepblue))",
         darkblue: "hsl(var(--darkblue))",
         blue: "hsl(var(--blue))",
         lightblue: "hsl(var(--lightblue))",
+        neongreen: "hsl(var(--neongreen))",
+        neonred: "hsl(var(--neonred))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

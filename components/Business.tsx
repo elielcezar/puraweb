@@ -48,7 +48,7 @@ const portfolioItems = [
 
 const Business = () => {
   return (
-    <section className="py-20 text-primary-foreground" style={{ background: `url(${process.env.NEXT_PUBLIC_BASE_PATH || ''}/parallax-home.jpg) no-repeat top center; background-size: cover;` }}>
+    <section className="py-20 text-primary-foreground" style={{ background: `url(${process.env.NEXT_PUBLIC_BASE_PATH || ''}/parallax-bottom.jpg) no-repeat top center; background-size: cover;` }}>
       
       
         <div className="text-center mb-12">

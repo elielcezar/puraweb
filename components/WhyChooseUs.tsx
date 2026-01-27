@@ -8,27 +8,27 @@ const WhyChooseUs = () => {
   const features = [
     {
       icon: Calendar,
-      text: "Mais de 16 anos de experiência"
+      text: "Site pronto em tempo recorde"
     },
     {
       icon: Settings,
-      text: "Laboratório técnico especializado"
+      text: "Suporte ágil via WhatsApp"
     },
     {
       icon: Shield,
-      text: "Peças de qualidade e garantia"
+      text: "Otimizado para o Google"
     },
     {
       icon: Zap,
-      text: "Atendimento transparente e rápido"
+      text: "Investimento único e sem taxas"
     },
     {
       icon: TrendingUp,
-      text: "Alta taxa de sucesso em reparo avançado"
+      text: "Visual moderno e profissional"
     },
     {
       icon: Star,
-      text: "Melhor avaliação no Google"
+      text: "Perfeito para celular e tablet"
     }
   ];
 
@@ -42,16 +42,19 @@ const WhyChooseUs = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.6 }}
-        >         
-
-            <H2 title="Por Que Escolher Nossa Assistência?" marginBorder="mx-left" color="text-foreground" />
+        >       
+            <h2 className="text-foreground mb-4 leading-tight">
+            Por que escolher a<br/>
+            Pura Web?
+            </h2>
+            <div className="h-1 w-24 bg-neongreen mx-left mb-6 rounded" />
             
-            <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Somos a melhor assistência técnica especializada em notebooks de Curitiba, reconhecida pela excelência no atendimento, alta taxa de sucesso em reparos e pelo compromisso absoluto com a qualidade.
+            <p className="text-2xl leading-tight text-muted-foreground leading-relaxed mb-6">
+              Porque na Pura Web acreditamos que toda empresa merece ter uma presença digital de alto nível sem precisar investir fortunas.
             </p>
             
-            <p className="text-xl font-semibold text-primary">
-              Com equipe técnica qualificada, laboratório equipado e um padrão elevado de atendimento, somos hoje a assistência mais bem avaliada da Google em Curitiba, conquistando a confiança de clientes individuais e empresas que buscam um serviço seguro, rápido e profissional. Mais de 90% dos defeitos tem reparo.
+            <p className="text-lg font-medium text-primary">
+              Combinamos agilidade com um processo de criação simplificado para entregar resultados reais. Somos especialistas em transformar a presença digital de pequenas empresas, criando sites bonitos e que funcionam como verdadeiras máquinas de vendas. Com a Pura Web, você tem a garantia de um serviço transparente, suporte humanizado e o melhor custo-benefício do mercado para colocar sua empresa no mapa.
             </p>
 
             {/* Stats Cards */}
@@ -63,8 +66,8 @@ const WhyChooseUs = () => {
                     key={index} 
                     className="bg-card p-4 text-center border border-border shadow-sm hover:shadow-md transition-shadow"
                   >
-                    <div className="w-14 h-14 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Icon className="w-7 h-7 text-accent" />
+                    <div className="w-14 h-14 bg-neonred rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Icon className="w-7 h-7 text-white" />
                     </div>              
                     <p className="text-muted-foreground">{feature.text}</p>
                   </div>

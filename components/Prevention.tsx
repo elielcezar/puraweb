@@ -47,11 +47,11 @@ const Prevention = () => {
         <div>
           <div className="text-center mb-12">
             <h2 className="text-foreground mb-4">
-            Create Your Website Without Coding
+            Entrega em tempo recorde 
             </h2>
             <div className="h-1 w-24 bg-accent mx-auto mb-6 rounded" />
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Be unique and make sure your website stands out from the crowd by using our brand new features. Shine a spotlight on your content and put your story front and center.
+            <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
+              Você não precisa entender de programação. Nós entregamos tudo configurado para você focar no que importa: atender seus clientes. Escolha seu modelo e nós cuidamos do resto.
             </p>
           </div>          
         

@@ -91,7 +91,7 @@ const Testimonials = () => {
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
                     <h2 className="mb-1">
-                        Quem contrata, aprova!
+                        Quem contratou, aprovou!
                     </h2>
                     <div className="h-1 w-24 bg-neongreen mx-auto mb-6 rounded" />
                     

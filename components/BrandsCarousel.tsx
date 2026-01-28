@@ -34,7 +34,7 @@ const BrandsCarousel = () => {
                     <h2 className="mb-1">
                         Já desenvolvemos projetos para:
                     </h2>
-                    <div className="h-1 w-24 bg-neonblue mx-auto mb-6 rounded" />
+                    <div className="h-1 w-24 bg-neongreen mx-auto mb-6 rounded" />
                     
                 </div>
         {/* Infinite Scroll Carousel */}

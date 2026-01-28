@@ -87,13 +87,13 @@ const Testimonials = () => {
    
 
     return (
-        <section id="servicos" className="pt-20 pb-20 px-10 bg-slate-100">
+        <section id="servicos" className="py-20 px-10 bg-slate-50">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
                     <h2 className="mb-1">
                         Quem contrata, aprova!
                     </h2>
-                    <div className="h-1 w-24 bg-neonblue mx-auto mb-6 rounded" />
+                    <div className="h-1 w-24 bg-neongreen mx-auto mb-6 rounded" />
                     
                 </div>
             </div>
@@ -103,7 +103,7 @@ const Testimonials = () => {
                 {/* Navigation Buttons */}
                 <button
                     onClick={scrollPrev}
-                    className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-12 h-12 bg-accent text-accent-foreground rounded-full shadow-lg hover:bg-accent/90 transition-all duration-300 flex items-center justify-center portrait:hidden"
+                    className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-12 h-12 bg-muted-foreground/50 text-accent-foreground rounded-full shadow-lg hover:bg-accent/90 transition-all duration-300 flex items-center justify-center portrait:hidden"
                     aria-label="Anterior"
                 >
                     <ChevronLeft className="w-6 h-6" />
@@ -111,7 +111,7 @@ const Testimonials = () => {
 
                 <button
                     onClick={scrollNext}
-                    className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-12 h-12 bg-accent text-accent-foreground rounded-full shadow-lg hover:bg-accent/90 transition-all duration-300 flex items-center justify-center portrait:hidden"
+                    className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-12 h-12 bg-muted-foreground/50 text-accent-foreground rounded-full shadow-lg hover:bg-accent/90 transition-all duration-300 flex items-center justify-center portrait:hidden"
                     aria-label="Próximo"
                 >
                     <ChevronRight className="w-6 h-6" />
@@ -120,22 +120,6 @@ const Testimonials = () => {
                 {/* Embla Carousel */}
                 <div className="overflow-hidden" ref={emblaRef}>
                     <div className="flex gap-6 pr-8 pl-8">
-
-                        {/*allServices.map((service, index) => (
-                <div
-                  key={index}
-                  className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_calc(50%-12px)] lg:flex-[0_0_calc(25%-16px)]"
-                >
-                  <div className="group bg-card rounded-xl p-6 border border-border hover:border-accent hover:shadow-lg transition-all duration-300 h-full">
-                    <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
-                      <service.icon className="w-6 h-6 text-accent" />
-                    </div>
-                    <h4 className="text-lg font-semibold text-foreground mb-2">{service.title}</h4>
-                    <p className="text-muted-foreground text-sm">{service.description}</p>
-                  </div>
-                </div>
-              ))*/}
-
 
                         {testimonials.map((testimonial, index) => (
                             <motion.div
@@ -146,8 +130,8 @@ const Testimonials = () => {
                                 key={index}
                                 className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_calc(50%-12px)] lg:flex-[0_0_calc(25%-16px)]"
                             >
-                                <div className="group bg-card rounded-xl p-6 border border-border hover:border-accent hover:shadow-lg transition-all duration-300 h-full relative">
-                                    <Quote className="absolute top-6 right-6 w-10 h-10 text-accent/20" />
+                                <div className="group bg-card p-6 border-2 border-white hover:border-2 hover:border-muted-foreground/40 shadow-xl transition-all duration-300 h-full relative">
+                                    <Quote className="absolute top-6 right-6 w-10 h-10 text-neongreen/20" />
 
                                     <div className="flex items-center mb-4 gap-4">
                                         <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">

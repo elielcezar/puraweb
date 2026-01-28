@@ -21,15 +21,13 @@ export default function Home() {
       <Header />
       <main>              
         <Hero />
-        <WhyChooseUs />         
-        <Included />
+        <WhyChooseUs />                 
         <Features />          
         <Prevention />
         <Services />
-        <Numbers />                  
+        <Numbers />                         
+        <Testimonials />             
         <BrandsCarousel /> 
-        <Testimonials />                   
-        
       </main>      
       <Footer />
     </div>

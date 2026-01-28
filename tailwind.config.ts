@@ -24,6 +24,8 @@ export default {
         bowlbysc: ['Bowlby One SC', 'sans-serif'],
         google: ['Google Sans', 'sans-serif'],
         archivo: ['Archivo Black', 'sans-serif'],
+        oswald: ['Oswald', 'sans-serif'],
+        stacksansnotch: ['Stack Sans Notch', 'sans-serif'],
       },
       colors: {
         deepblue: "hsl(var(--deepblue))",
@@ -33,6 +35,7 @@ export default {
         neongreen: "hsl(var(--neongreen))",
         neonred: "hsl(var(--neonred))",
         neonblue: "hsl(var(--neonblue))",
+        deepgray: "hsl(var(--deepgray))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

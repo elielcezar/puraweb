@@ -2,7 +2,7 @@ import { Phone, Mail } from "lucide-react";
 
 const Footer = () => {
     return (
-        <footer className=" text-white pt-36 pb-52 bg-[#111111]">
+        <footer className=" text-white pt-28 pb-40 bg-[#202632]">
 
             <div className="max-w-7xl mx-auto sm:px-6 lg:px-8 text-center flex flex-col items-center gap-4">
 
@@ -13,7 +13,7 @@ const Footer = () => {
                     height="95"
                 />
                 
-                <h2>Pronto para conquistar mais clientes?</h2>
+                <h2 className="text-white">Pronto para conquistar mais clientes?</h2>
                 
                
                 <div className="flex justify-between portrait:flex-col portrait:items-center portrait:gap-4 text-center w-full">

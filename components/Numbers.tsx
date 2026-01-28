@@ -7,24 +7,31 @@ import { motion } from "framer-motion";
 
 const Numbers = () => {
 
+  const numbers = [
+    {
+      title: "32%",
+      description: "Páginas que carregam em menos de 3 segundos tem até 32% mais chances de serem encontradas pelo Google",
+      image: "/feature1.jpg"
+    },
+    {
+      title: "20%",
+      description: "Ter um site profissional transmite confiança para o cliente e pode aumentar seu faturamento em até 20%",
+      image: "/feature2.jpg"
+    },
+    {
+      title: "200%",
+      description: "Melhore sua visibilidade no Google em até 200% e reduza seus custos com marketing digital",
+      image: "/feature3.jpg"
+    }
+  ];
   return (
-    <section className="flex items-center justify-center">
-       
-        <div className="flex-1 px-12 py-16 bg-neonred relative min-h-[350px] flex flex-col items-center justify-around overflow-hidden text-center">              
-              <h3 className="text-[256px] tracking-tight font-normal font-archivo leading-tight text-white/10 absolute bottom-[-60px] right-[-50px]">32%</h3>
-              <ShieldCheck className="w-20 h-20 text-neonred mx-auto mb-4 bg-white rounded-full p-6 relative z-10" />
-              <p className="text-white text-xl font-light max-w-[70%]">Páginas que carregam em menos de 3 segundos tem até <strong className="text-white text-3xl font-bold">32%</strong> mais chances de ser encontrado pelo Google</p>
-        </div>        
-        <div className="flex-1 px-12 py-16 bg-[#17cfab] relative min-h-[350px] flex flex-col items-center justify-around overflow-hidden text-center">              
-            <h3 className="text-[256px] tracking-tight font-normal font-archivo leading-tight text-white/10 absolute bottom-[-60px] right-[-50px]">20%</h3>
-            <ShieldCheck className="w-20 h-20 text-neongreen mx-auto mb-4 bg-white rounded-full p-6 relative z-10" />
-              <p className="text-white text-xl font-light max-w-[70%]">Ter um site profissional por aumentar seu faturamento em até <strong className="text-white text-3xl font-bold">20%</strong></p>
+    <section className="flex items-center justify-center p-10 pt-32 pb-24 gap-10">               
+       {numbers.map((number, index) => (
+        <div key={index} className="flex-1 p-12 pt-4 relative  flex flex-col items-center justify-start text-center shadow-xl" style={{ background: `url(${process.env.NEXT_PUBLIC_BASE_PATH || ''}/parallax-home.jpg) no-repeat top center; background-size: cover; background-attachment: fixed` }}>
+          <h3 className="text-[126px] font-bold font-oswald leading-tight text-neongreen tracking-tight mt-[-90px] mb-4" style={{ textShadow: '5px 5px 5px rgba(0, 0, 0, 0.15)' }}>{number.title}</h3>          
+          <p className="text-white text-lg font-normal max-w-[350px] mx-auto leading-tight">{number.description}</p>
         </div>
-        <div className="flex-1 px-12 py-16 bg-neonblue relative min-h-[350px] flex flex-col items-center justify-around overflow-hidden text-center">              
-            <h3 className="text-[256px] tracking-tight font-normal font-archivo leading-tight text-white/10 absolute bottom-[-60px] right-[-50px]">200%</h3>
-            <ShieldCheck className="w-20 h-20 text-neonblue mx-auto mb-4 bg-white rounded-full p-6 relative z-10" />
-            <p className="text-white text-xl font-light max-w-[70%]">Melhore sua visibilidade no Google em até <strong className="text-white text-3xl font-bold">200%</strong> e reduza seus custos com marketing</p>
-        </div>
+       ))}
     </section>
   );
 };

@@ -22,7 +22,7 @@ const WhyChooseUs = () => {
             <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logo2.png`} alt="Pura Web" className="mt-[-10px]"/>
             </h2>            
             
-            <p className="text-[1.75rem] leading-tight text-primary leading-relaxed mb-6">
+            <p className="text-[1.95rem] leading-tight text-primary leading-relaxed mb-6 font-oswald">
               Acreditamos que toda empresa merece ter uma presença digital de alto nível sem precisar investir fortunas.
             </p>            
             <p className="text-[1.15rem] font-normal text-muted-foreground mb-4">
@@ -38,7 +38,7 @@ const WhyChooseUs = () => {
         </motion.div>
 
         <motion.div 
-          className="flex-1 max-w-lg flex items-center justify-center relative overflow-hidden"
+          className="flex-1 max-w-lg flex items-center justify-center relative overflow-hidden shadow-xl"
           initial={{ opacity: 0, x: 60 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}

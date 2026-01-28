@@ -16,11 +16,11 @@ const Prevention = () => {
           <div className="text-center mb-12">
             
       <h2 className="mb-6 max-w-4xl mx-auto leading-tight tracking-tight">
-        Escolha o modelo que mais combina <strong className="text-neonred">com seu negócio</strong>
+        Escolha o modelo que mais combina <strong className="text-neongreen">com seu negócio</strong>
       </h2>
-      <div className="h-1 w-24 bg-neonred mx-auto mb-6 rounded" />
+      <div className="h-1 w-24 bg-neongreen mx-auto mb-6 rounded" />
       <p className="text-2xl text-primary max-w-3xl mx-auto">
-          Temos modelos para todos os tipos de negócio, <br/>mas se você preferir, também <strong className="text-neonred font-archivo uppercase">criamos seu site do zero</strong>.
+          Temos modelos para todos os tipos de negócio, <br/>mas se você preferir, também <strong className="text-neongreen font-oswald uppercase">criamos seu site do zero</strong>.
         </p>
             </div>          
         

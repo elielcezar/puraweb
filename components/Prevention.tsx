@@ -4,59 +4,28 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
 const Prevention = () => {
-  const benefits = [
-    {
-      icon: AlertCircle,
-      title: "Evita superaquecimento",
-      description: "A poeira acumulada impede a ventilação, causando lentidão e danos à placa-mãe."
-    },
-    {
-      icon: TrendingUp,
-      title: "Aumenta a vida útil",
-      description: "Limpezas periódicas e troca da pasta térmica reduzem o desgaste interno."
-    },
-    {
-      icon: ShieldCheck,
-      title: "Melhora o desempenho",
-      description: "Um sistema limpo e otimizado roda mais rápido e com menos travamentos."
-    },
-    {
-      icon: Database,
-      title: "Reduz riscos de perda de dados",
-      description: "A prevenção ajuda a identificar problemas em HDs e SSDs antes que falhem."
-    },
-    {
-      icon: DollarSign,
-      title: "Economiza dinheiro",
-      description: "Corrigir um defeito no início é muito mais barato do que trocar peças danificadas."
-    }
-  ];
-
-  const dailyCare = [
-    "Evite usar o notebook sobre superfícies macias (como cama ou sofá). Elas bloqueiam a ventilação e causam superaquecimento.",
-    "Não mantenha o notebook sempre ligado na tomada. Isso reduz a vida útil da bateria.",
-    "Mantenha o teclado limpo e protegido. Poeira e migalhas podem danificar as teclas.",
-    "Use mochilas ou capas acolchoadas para transporte.",
-    "Faça backup regularmente para proteger seus dados."
-  ];
+ 
 
   return (
-    <section className="pt-20 bg-background">
+    <section className="pt-28 bg-background">
       <div className="container mx-auto px-4">
+
+
         {/* Preventive Maintenance */}
-        <div>
+        <div className="relative">
           <div className="text-center mb-12">
-            <h2 className="text-foreground mb-4">
-            Entrega em tempo recorde 
-            </h2>
-            <div className="h-1 w-24 bg-accent mx-auto mb-6 rounded" />
-            <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
-              Você não precisa entender de programação. Nós entregamos tudo configurado para você focar no que importa: atender seus clientes. Escolha seu modelo e nós cuidamos do resto.
-            </p>
-          </div>          
+            
+      <h2 className="mb-6 max-w-4xl mx-auto leading-tight tracking-tight">
+        Escolha o modelo que mais combina <strong className="text-neonred">com seu negócio</strong>
+      </h2>
+      <div className="h-1 w-24 bg-neonred mx-auto mb-6 rounded" />
+      <p className="text-2xl text-primary max-w-3xl mx-auto">
+          Temos modelos para todos os tipos de negócio, <br/>mas se você preferir, também <strong className="text-neonred font-archivo uppercase">criamos seu site do zero</strong>.
+        </p>
+            </div>          
         
             <motion.div 
-              className="overflow-hidden"
+              className="overflow-hidden mt-28"
               initial={{ opacity: 0, x: 60 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -64,9 +33,11 @@ const Prevention = () => {
             >            
               <img 
                 src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/portfolios.webp`}
-                alt="Business"                 
+                alt="Business"  
               />
             </motion.div>
+
+            <img src="/splash.png" alt="Features" className="w-full mx-auto absolute bottom-[-94px] left-[auto] right-[52px] max-w-[220px]" />
         </div>
       </div>
     </section>

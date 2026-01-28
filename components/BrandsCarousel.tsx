@@ -30,12 +30,13 @@ const BrandsCarousel = () => {
   return (
     <section id="brands" className="py-12 bg-background">
       <div className="mx-auto px-4">
-        <div className="text-center mb-8">
-          <h3 className="text-2xl font-bold text-foreground mb-2">
-            Já desenvolvemos projetos para empresas como:
-          </h3>        
-        </div>
-
+      <div className="text-center mb-12">
+                    <h2 className="mb-1">
+                        Já desenvolvemos projetos para:
+                    </h2>
+                    <div className="h-1 w-24 bg-neonblue mx-auto mb-6 rounded" />
+                    
+                </div>
         {/* Infinite Scroll Carousel */}
         <div className="overflow-hidden">
           <div 

@@ -74,7 +74,7 @@ const Services = () => {
             <div className="flex">
 
                 <div key="01" className="flex-[0_0_100%] flex items-center justify-center bg-[#3d204e] min-h-[800px]">
-                  <div className="flex items-center justify-center flex-col p-6 transition-all duration-300 h-full w-full" style={{ background: `url(${process.env.NEXT_PUBLIC_BASE_PATH || ''}/burst.jpg) no-repeat center center; background-size: cover;` }}>                    
+                  <div className="flex items-center justify-center flex-col p-6 transition-all duration-300 h-full w-full" style={{ background: `url(${process.env.NEXT_PUBLIC_BASE_PATH || ''}/burst.jpg) no-repeat center center; background-size: cover` }}>                    
                     <h3 className="text-[36px] text-white font-pacifico mb-[-20px]">Sua marca muito mais</h3>
                     <p className="text-[84px] text-white font-bowlby mt-0">PROFISSIONAL</p>
                     <p className="text-white text-xl font-bold">Sua empresa na internet com o melhor custo-benefício</p>               
@@ -83,7 +83,7 @@ const Services = () => {
                 
                 
                 <div key="02" className="flex-[0_0_100%] flex items-center justify-center bg-[#3d204e] min-h-[800px]">
-                  <div className="flex items-center justify-center flex-col p-6 transition-all duration-300 h-full w-full" style={{ background: `url(${process.env.NEXT_PUBLIC_BASE_PATH || ''}/slide-image-1.jpg) no-repeat center center; background-size: cover;` }}>
+                  <div className="flex items-center justify-center flex-col p-6 transition-all duration-300 h-full w-full" style={{ background: `url(${process.env.NEXT_PUBLIC_BASE_PATH || ''}/slide-image-1.jpg) no-repeat center center; background-size: cover` }}>
                     <h3 className="text-[36px] text-white font-pacifico mb-[-20px]">Mais cliques, mais</h3>
                     <p className="text-[84px] text-white font-bowlby mt-0">VENDAS</p>
                     <p className="text-white text-xl font-bold">Atraia clientes qualificados com um site feito para converter</p>  
@@ -95,7 +95,7 @@ const Services = () => {
                 </div>
 
                 <div key="03" className="flex-[0_0_100%] flex items-center justify-center bg-[#3d204e] min-h-[800px]">
-                  <div className="flex items-center justify-center flex-col p-6 transition-all duration-300 h-full w-full" style={{ background: `url(${process.env.NEXT_PUBLIC_BASE_PATH || ''}/background1.jpg) no-repeat center center; background-size: cover;` }}>                    
+                  <div className="flex items-center justify-center flex-col p-6 transition-all duration-300 h-full w-full" style={{ background: `url(${process.env.NEXT_PUBLIC_BASE_PATH || ''}/background1.jpg) no-repeat center center; background-size: cover` }}>                    
                     <h3 className="text-[36px] text-white font-pacifico mb-[-20px]">Seu site na internet</h3>
                     <p className="text-[84px] text-white font-bowlby mt-0">MAIS PROFISSIONAL</p>
                     <p className="text-white text-xl font-bold">Com o melhor custo-benefício do mercado</p>               

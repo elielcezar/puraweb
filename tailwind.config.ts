@@ -22,6 +22,8 @@ export default {
         pacifico: ['Pacifico', 'cursive'],
         bowlby: ['Bowlby One', 'sans-serif'],
         bowlbysc: ['Bowlby One SC', 'sans-serif'],
+        google: ['Google Sans', 'sans-serif'],
+        archivo: ['Archivo Black', 'sans-serif'],
       },
       colors: {
         deepblue: "hsl(var(--deepblue))",

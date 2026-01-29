@@ -106,7 +106,7 @@ const Services = () => {
       </div>       
 
       {/* Carousel Container */}
-        <div className="relative mx-auto px-20">
+        <div className="relative mx-auto">
           {/* Navigation Buttons */}
           <button
             onClick={scrollPrev}
@@ -126,11 +126,9 @@ const Services = () => {
 
           {/* Embla Carousel */}
           <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex gap-6 pr-8 pl-8">
-             
-
+            <div className="flex">
                 {portfolioItems.map((item, index) => (
-                    <div key={index} className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_calc(50%-12px)] lg:flex-[0_0_calc(25%-16px)]">
+                    <div key={index} className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_calc(25%-16px)] p-10">
                         <img src={item.image} alt={item.title} className="w-full max-w-[420px] object-cover" />                       
                     </div>
                 ))}

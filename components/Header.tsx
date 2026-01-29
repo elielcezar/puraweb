@@ -44,41 +44,56 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-[100] bg-black/50 backdrop-blur-sm">
-      <nav className="container mx-auto px-4 py-4">
+    <header className="fixed top-0 left-0 right-0 z-[100] bg-black/75 backdrop-blur-sm max-w-[900px] rounded-full mx-auto my-2 pl-2 pr-0 pt-0">
+      <nav className=" mx-auto px-3 py-2">
         <div className="flex items-center justify-between portrait:flex-col portrait:items-center portrait:gap-4">
           {/* Logo */}          
-          <div className="flex items-center gap-2">      
-            <Link href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/`}>      
+          <div className="flex items-center gap-2 justify-between w-full">                 
             <img 
               src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logo-pura.webp`}
               alt="Logo" 
               width="100" 
               height="47" 
-              className="w-24"
+              className="w-24 mt-[-12px]"              
             />
-            </Link>
+            <nav className="flex items-center gap-6">
+              <Link href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/`} className="text-white text-sm font-semibold hover:text-neongreen transition-colors uppercase">      
+                Quem Somos
+              </Link>
+              <Link href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/sobre`} className="text-white text-sm font-semibold hover:text-neongreen transition-colors uppercase">      
+                Nossos Serviços
+              </Link>
+              <Link href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/sobre`} className="text-white text-sm font-semibold hover:text-neongreen transition-colors uppercase">      
+                Portfólio
+              </Link>
+              <Link href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/franquia`} className="text-white text-sm font-semibold hover:text-neongreen transition-colors uppercase">      
+                FAQ
+              </Link>                        
+              <Link href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/contato`} className="text-white text-sm font-bold hover:text-neongreen transition-colors uppercase bg-neongreen hover:bg-white text-white px-4 py-2 rounded-full">      
+                Contato
+              </Link>
+            </nav>          
           </div>
 
 
           {/* Mobile Menu Button */}
-          <button
+         {/* <button
             className="absolute right-4 top-6"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
-              <X className="w-6 h-6 text-foreground" />
+              <X className="w-6 h-6 text-white" />
             ) : (
-              <Menu className="w-6 h-6 text-foreground" />
+              <Menu className="w-6 h-6 text-white" />
             )}
-          </button>
+          </button>*/}
         </div>
 
         {/* Mobile Navigation */}
-        {isMenuOpen && (
+        {/*isMenuOpen && (
           <div className="lg:hidden mt-4 py-8 border-t border-border">
             <div className="flex flex-col gap-4">
-              {/* Menu Links */}
+              
               <div className="flex flex-col gap-2 mb-4">
                 <a href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/sobre`} className="text-foreground hover:text-accent font-medium py-2 px-4 rounded-md hover:bg-accent/10 transition-colors">
                   Sobre
@@ -116,7 +131,7 @@ const Header = () => {
               </div>           
             </div>
           </div>
-        )}
+        )*/}
       </nav>
     </header>
   );

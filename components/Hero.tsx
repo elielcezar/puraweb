@@ -32,21 +32,6 @@ const Services = () => {
     if (emblaApi) emblaApi.scrollNext();
   }, [emblaApi]);
 
-  // Todos os serviços em uma única lista
-  const allServices = [
-    { icon: Monitor, title: "Troca de Tela", description: "Substituição de telas quebradas ou com falhas de imagem" },
-    { icon: Wrench, title: "Teclado e Carcaça", description: "Substituição de teclado, dobradiças e carcaças" },
-    { icon: Thermometer, title: "Resfriamento", description: "Troca de cooler e reparo de superaquecimento" },
-    { icon: Cpu, title: "Placa-Mãe", description: "Reparo de placa-mãe e componentes eletrônicos" },
-    { icon: Zap, title: "Energia", description: "Recuperação de notebooks com problemas de liga/desliga" },
-    { icon: HardDrive, title: "SSD Installation", description: "Aumente a velocidade do seu notebook em até 10x" },
-    { icon: Cpu, title: "Memória RAM", description: "Expansão de memória para melhor desempenho" },
-    { icon: Thermometer, title: "Limpeza Profunda", description: "Limpeza interna e troca de pasta térmica" },
-    { icon: Monitor, title: "Sistema Operacional", description: "Formatação e otimização do sistema" },
-    { icon: Cpu, title: "Reparo de BIOS", description: "Reparo de BIOS e chips de memória" },
-    { icon: Cpu, title: "Troca de conectores", description: "Troca de conectores de energia e portas USB" },
-  ];
-
   return (
     <section id="servicos">     
 
@@ -75,8 +60,8 @@ const Services = () => {
 
                 <div key="01" className="flex-[0_0_100%] flex items-center justify-center bg-[#3d204e] min-h-[800px]">
                   <div className="flex items-center justify-center flex-col p-6 transition-all duration-300 h-full w-full" style={{ background: `url(${process.env.NEXT_PUBLIC_BASE_PATH || ''}/burst.jpg) no-repeat center center; background-size: cover` }}>                    
-                    <h3 className="text-[56px] text-white font-pacifico mb-[-10px]">Sua marca muito mais</h3>
-                    <p className="text-[104px] text-white font-bowlby mt-0">PROFISSIONAL</p>
+                    <h3 className="text-[56px] text-white font-pacifico mb-[-40px]">Sua marca muito mais</h3>
+                    <p className="text-[140px] text-white font-oswald mt-0 font-bold tracking-tight" style={{ textShadow: '5px 5px 5px rgba(0, 0, 0, 0.15)', letterSpacing: '-3px' }}>PROFISSIONAL</p>
                     <p className="text-white text-3xl font-normal">Sua empresa na internet com o melhor custo-benefício</p>               
                   </div>
                 </div>           
@@ -85,8 +70,8 @@ const Services = () => {
                 <div key="02" className="flex-[0_0_100%] flex items-center justify-center bg-[#3d204e] min-h-[800px]">
                   <div className="flex items-center justify-center flex-col p-6 transition-all duration-300 h-full w-full" style={{ background: `url(${process.env.NEXT_PUBLIC_BASE_PATH || ''}/fullscreen-slide-1.jpg) no-repeat center center; background-size: cover` }}>
                     
-                        <h3 className="text-[56px] text-neongreen font-pacifico mb-[-10px]">Mais cliques, mais</h3>
-                        <p className="text-[104px] text-white font-bowlby mt-0">VENDAS</p>
+                        <h3 className="text-[56px] text-neongreen font-pacifico mb-[-40px]">Mais cliques, mais</h3>
+                        <p className="text-[140px] text-white font-oswald mt-0 font-bold tracking-tight" style={{ textShadow: '5px 5px 5px rgba(0, 0, 0, 0.15)', letterSpacing: '-3px' }}>VENDAS</p>
                         <p className="text-white text-3xl font-normal">Atraia clientes qualificados com um site feito para converter</p>  
                         <div className="cta-box flex gap-4 mt-10">
                           <Button className="btn-primary border-2 border-white rounded-none px-12 py-6 text-lg font-normal bg-transparent text-white hover:bg-white hover:text-black">Contato</Button>
@@ -98,8 +83,8 @@ const Services = () => {
 
                 <div key="03" className="flex-[0_0_100%] flex items-center justify-center bg-[#3d204e] min-h-[800px]">
                   <div className="flex items-center justify-center flex-col p-6 transition-all duration-300 h-full w-full" style={{ background: `url(${process.env.NEXT_PUBLIC_BASE_PATH || ''}/background1.jpg) no-repeat center center; background-size: cover` }}>                    
-                    <h3 className="text-[56px] text-white font-pacifico mb-[-10px]">Seu site na internet</h3>
-                    <p className="text-[104px] text-white font-bowlby mt-0">MAIS PROFISSIONAL</p>
+                    <h3 className="text-[56px] text-white font-pacifico mb-[-40px]">Seu site na internet</h3>
+                    <p className="text-[140px] text-white font-oswald mt-0 font-bold tracking-tight" style={{ textShadow: '5px 5px 5px rgba(0, 0, 0, 0.15)', letterSpacing: '-3px' }}>MAIS PROFISSIONAL</p>
                     <p className="text-white text-3xl font-normal">Com o melhor custo-benefício do mercado</p>               
                   </div>
                 </div>

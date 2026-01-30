@@ -75,35 +75,23 @@ const Services = () => {
     if (emblaApi) emblaApi.scrollNext();
   }, [emblaApi]);
 
-  // Todos os serviços em uma única lista
-  const allServices = [
-    { icon: Monitor, title: "Troca de Tela", description: "Substituição de telas quebradas ou com falhas de imagem" },
-    { icon: Wrench, title: "Teclado e Carcaça", description: "Substituição de teclado, dobradiças e carcaças" },
-    { icon: Thermometer, title: "Resfriamento", description: "Troca de cooler e reparo de superaquecimento" },
-    { icon: Cpu, title: "Placa-Mãe", description: "Reparo de placa-mãe e componentes eletrônicos" },
-    { icon: Zap, title: "Energia", description: "Recuperação de notebooks com problemas de liga/desliga" },
-    { icon: HardDrive, title: "SSD Installation", description: "Aumente a velocidade do seu notebook em até 10x" },
-    { icon: Cpu, title: "Memória RAM", description: "Expansão de memória para melhor desempenho" },
-    { icon: Thermometer, title: "Limpeza Profunda", description: "Limpeza interna e troca de pasta térmica" },
-    { icon: Monitor, title: "Sistema Operacional", description: "Formatação e otimização do sistema" },
-    { icon: Cpu, title: "Reparo de BIOS", description: "Reparo de BIOS e chips de memória" },
-    { icon: Cpu, title: "Troca de conectores", description: "Troca de conectores de energia e portas USB" },
-  ];
 
   return (
     <section className="py-32 text-primary-foreground bg-[#202632]">
            
       
-    <div className="text-center mb-24">
-
-      <h2 className="text-white mb-4 leading-tight">
-                Entrega em tempo recorde  
-              </h2>
-              <div className="h-1 w-24 bg-neonred mx-auto mb-6 rounded" />
-                <p className="text-[1.15rem] text-muted-foreground max-w-4xl mx-auto text-white">
-                  Você não precisa entender de programação. Nós entregamos tudo configurado para você focar no que importa: atender seus clientes. Escolha um modelo e nós cuidamos do resto.
-                </p>     
-      </div>       
+      <div className="text-center mb-12">            
+        <h3 className="mx-auto leading-tight font-pacifico text-neongreen text-4xl mb-[-25px]">
+          Dezenas de modelos validados para você
+        </h3>
+        <h2 className="mb-6 mx-auto font-oswald text-[106px] leading-tight text-white" style={{ textShadow: '5px 5px 5px rgba(0, 0, 0, 0.15)', letterSpacing: '-3px' }}>
+          VENDER MUITO MAIS
+        </h2>
+        <div className="h-1 w-24 bg-neongreen mx-auto mb-6 rounded" />
+        <p className="text-2xl text-white max-w-3xl mx-auto">
+            Um site profissional e moderno agrega valor ao seu negócio e aumenta suas chances de venda.
+          </p>
+      </div>          
 
       {/* Carousel Container */}
         <div className="relative mx-auto">

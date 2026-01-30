@@ -88,15 +88,27 @@ const Testimonials = () => {
 
     return (
         <section id="servicos" className="py-20 px-10 bg-slate-50">
-            <div className="container mx-auto px-4">
-                <div className="text-center mb-12">
-                    <h2 className="mb-1">
-                        Quem contratou, aprovou!
-                    </h2>
-                    <div className="h-1 w-24 bg-neongreen mx-auto mb-6 rounded" />
-                    
-                </div>
-            </div>
+            <div className="text-center mb-12">            
+                <h3 className="mx-auto leading-tight font-pacifico text-neongreen text-4xl mb-[-25px]">
+                Centenas de clientes
+                </h3>
+                <h2 className="mb-6 mx-auto font-oswald text-[106px] leading-tight" style={{ textShadow: '5px 5px 5px rgba(0, 0, 0, 0.15)', letterSpacing: '-3px' }}>
+                satisfeitos
+                </h2>
+                <div className="h-1 w-24 bg-neongreen mx-auto mb-6 rounded" />
+                <div className="inline-flex items-center gap-2 bg-card border border-border rounded-full px-6 py-3 shadow-sm mb-4">
+                            <Star className="w-7 h-7 fill-amber-400 text-amber-400 mx-0" />
+                            <Star className="w-7 h-7 fill-amber-400 text-amber-400 mx-0" />
+                            <Star className="w-7 h-7 fill-amber-400 text-amber-400 mx-0" />
+                            <Star className="w-7 h-7 fill-amber-400 text-amber-400 mx-0" />
+                            <Star className="w-7 h-7 fill-amber-400 text-amber-400 mx-0" />
+                            <p>
+                                <span className="font-semibold text-foreground text-3xl font-bold">4.8</span>
+                                <span className="font-semibold text-foreground text-lg font-normal">/5.0</span>
+                            </p>
+                        </div>
+
+            </div>    
 
             {/* Carousel Container */}
             <div className="relative mx-auto px-20">
@@ -120,7 +132,6 @@ const Testimonials = () => {
                 {/* Embla Carousel */}
                 <div className="overflow-hidden" ref={emblaRef}>
                     <div className="flex gap-6 pr-8 pl-8">
-
                         {testimonials.map((testimonial, index) => (
                             <motion.div
                                 initial={{ opacity: 0, y: 120 }}
@@ -157,19 +168,7 @@ const Testimonials = () => {
 
                     {/* Google Reviews Badge */}
                     <div className="text-center mt-12 flex flex-col items-center">
-
-                        <div className="inline-flex items-center gap-2 bg-card border border-border rounded-full px-6 py-3 shadow-sm mb-4">
-                            <Star className="w-7 h-7 fill-amber-400 text-amber-400 mx-0" />
-                            <Star className="w-7 h-7 fill-amber-400 text-amber-400 mx-0" />
-                            <Star className="w-7 h-7 fill-amber-400 text-amber-400 mx-0" />
-                            <Star className="w-7 h-7 fill-amber-400 text-amber-400 mx-0" />
-                            <Star className="w-7 h-7 fill-amber-400 text-amber-400 mx-0" />
-                            <p>
-                                <span className="font-semibold text-foreground text-3xl font-bold">4.8</span>
-                                <span className="font-semibold text-foreground text-lg font-normal">/5.0</span>
-                            </p>
-                        </div>
-
+                        
                         <p id="reviews-count" className="text-gray-600">Baseado em mais de 850 avaliações no Google</p>
 
                         <div className="flex items-center justify-center mt-4 space-x-4 portrait:flex-col">

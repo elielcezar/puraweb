@@ -12,8 +12,9 @@ const Footer = () => {
                     width="200"
                     height="95"
                 />
+                <p className="text-white text-xl mb-[-20px] mt-6">Se você chegou até aqui é porque nosso produto funciona!</p>
                 
-                <h2 className="text-white">Pronto para conquistar mais clientes?</h2>
+                <h2 className="text-white mt-0">Pronto para conquistar mais clientes?</h2>
                 
                
                 <div className="flex justify-between portrait:flex-col portrait:items-center portrait:gap-4 text-center w-full">

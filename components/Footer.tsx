@@ -9,7 +9,7 @@ const Footer = () => {
                 <img
                     src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logo-pura.webp`}
                     alt="NotebookExpert"
-                    width="200"
+                    width="250"
                     height="95"
                 />
                 <p className="text-white text-xl mb-[-20px] mt-6">Se você chegou até aqui é porque nosso produto funciona!</p>
@@ -32,7 +32,7 @@ const Footer = () => {
 
             <div className="btn-circle">
                 <a href="https://wa.me/5541999631609" target="_blank" rel="noopener noreferrer">
-                    <i className="fab fa-whatsapp text-3xl"></i>
+                    <i className="fab fa-whatsapp text-4xl"></i>
                 </a>
             </div>
            

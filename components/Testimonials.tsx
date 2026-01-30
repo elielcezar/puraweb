@@ -133,11 +133,7 @@ const Testimonials = () => {
                 <div className="overflow-hidden" ref={emblaRef}>
                     <div className="flex gap-6 pr-8 pl-8">
                         {testimonials.map((testimonial, index) => (
-                            <motion.div
-                                initial={{ opacity: 0, y: 120 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.6 }}
+                            <div
                                 key={index}
                                 className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_calc(50%-12px)] lg:flex-[0_0_calc(25%-16px)]"
                             >
@@ -162,7 +158,7 @@ const Testimonials = () => {
                                     <p className="text-gray-600 italic">"{testimonial.content}"</p>
 
                                 </div>
-                            </motion.div>
+                            </div>
                         ))}
                     </div>
 

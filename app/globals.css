@@ -152,11 +152,11 @@ All colors MUST be HSL.
 }
 
 .btn-circle {
-  width: 55px;
-  height: 55px;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
   box-shadow: 0px 0px 1px 1px #0000001a;
-  background-color: #24cc24;
+  background-color: hsl(var(--neongreen));
   animation: pulse-animation 2s infinite;
   position: fixed;
   bottom: 30px;
@@ -168,8 +168,8 @@ All colors MUST be HSL.
   align-items: center;
   justify-content: center;
   &:hover {
-    transform: scale(1.1);
-    background-color: #1eac1e;
+    transform: scale(1.2);
+    background-color: hsl(var(--neongreen));
   }
 }
 
@@ -195,3 +195,10 @@ All colors MUST be HSL.
   animation: infinite-scroll 60s linear infinite;
 }
 
+.numbers-description {
+  @apply text-white text-lg font-normal max-w-[400px] mx-auto leading-tight mb-0;
+}
+
+.numbers-description strong {
+  @apply text-5xl font-extrabold tracking-tight text-neongreen inline-block w-full mt-2;
+}

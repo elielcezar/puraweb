@@ -20,18 +20,20 @@ const Numbers = () => {
     },
     {
       title: "Economia",
-      description: "Reduza seus custos com marketing digital ao melhorar sua visibilidade no Google em até <strong>200%</strong>",
+      description: "Reduza seus custos com marketing digital ao melhorar sua visibilidade nas buscas do Google em até <strong>200%</strong>",
       image: "/feature3.jpg"
     }
   ];
   return (
-    <section className="flex items-center justify-center p-10 pt-32 pb-24 gap-10 bg-[#161c24]">               
+    <section className=" bg-[#161c24]" style={{ background: `url(${process.env.NEXT_PUBLIC_BASE_PATH || ''}/parallax-bottom4.jpg) no-repeat top center; background-size: cover; background-attachment: fixed` }}>               
+       <div className="max-w-[1600px] mx-auto flex items-center justify-center p-10 pt-32 pb-24 gap-10">
        {numbers.map((number, index) => (
-        <div key={index} className="flex-1 px-12 pt-4 pb-8 relative flex flex-col items-center justify-start text-center shadow-xl" style={{ background: `url(${process.env.NEXT_PUBLIC_BASE_PATH || ''}/parallax-home.jpg) no-repeat top center; background-size: cover; background-attachment: fixed` }}>
-          <h3 className="text-[66px] font-bold font-oswald uppercase leading-tight text-neongreen tracking-tight mt-[-60px] mb-4" style={{ textShadow: '5px 5px 5px rgba(0, 0, 0, 0.15)' }}>{number.title}</h3>          
+        <div key={index} className="flex-1 px-12 pt-4 pb-8 relative flex flex-col items-center justify-start text-center border border-neongreen border-2 rounded-sm" style={{ boxShadow: '0px 3px 10px rgb(23 207 198 / 50%)' }}>
+          <h3 className="text-[66px] font-bold font-oswald uppercase leading-tight text-neongreen tracking-tight mt-[-60px] mb-4 bg-[#181b23]" style={{ textShadow: '5px 5px 5px rgba(0, 0, 0, 0.15)' }}>{number.title}</h3>          
           <p dangerouslySetInnerHTML={{ __html: number.description }} className="numbers-description"></p>
         </div>
        ))}
+       </div>
     </section>
   );
 };

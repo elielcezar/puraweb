@@ -31,12 +31,14 @@ const BrandsCarousel = () => {
 
 
   return (
-    <section id="brands" className="py-12 bg-background">
-       <div className="text-center mb-12">                                   
-            <p className="text-2xl text-primary mx-auto">
-                Já trabalhamos para 
-                <strong className="font-oswald uppercase text-5xl tracking-tight inline-block w-full">grandes marcas:</strong>                 
-            </p>
+    <section id="brands" className="py-20 bg-background">
+       <div className="text-center mb-16">                                   
+       <h3 className="mx-auto leading-tight font-pacifico text-neongreen text-4xl mb-[-25px]">
+                Nós já trabalhamos com
+            </h3>
+            <h2 className="mb-4 mx-auto font-oswald text-[64px] md:text-[96px] leading-tight" style={{ textShadow: '5px 5px 5px rgba(0, 0, 0, 0.15)', letterSpacing: '-3px' }}>
+                Grandes Marcas
+            </h2>
           </div>          
         
 
@@ -52,7 +54,7 @@ const BrandsCarousel = () => {
             {brands.map((brand, index) => (
               <div
                 key={`first-${index}`}
-                className="flex-[0_0_auto] w-[150px] mr-8"
+                className="flex-[0_0_auto] w-[220px] mr-8"
               >
                 
                   <div className="relative w-full h-full flex items-center justify-center">                                        
@@ -60,7 +62,7 @@ const BrandsCarousel = () => {
                       src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/${brand.image}`}
                       alt={`Logo ${brand.name}`} 
                     
-                      className="max-h-[60px] max-w-[150px]"
+                      className="max-h-[90px] max-w-[200]"
                     />
                   </div>
                 

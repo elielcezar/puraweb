@@ -47,7 +47,7 @@ const WhyChooseUs = () => {
           <img 
             src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/img01.jpg`}
             alt="About" 
-            className="absolute inset-0 w-full object-cover"
+            className="absolute inset-0 w-full object-cover rounded-sm"
           />
         </motion.div>
                 

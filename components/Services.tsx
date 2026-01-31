@@ -77,14 +77,14 @@ const Services = () => {
 
 
   return (
-    <section className="py-32 text-primary-foreground bg-[#202632]">
+    <section className="py-32 text-primary-foreground bg-[#202632]" style={{ background: `url(${process.env.NEXT_PUBLIC_BASE_PATH || ''}/bg-geral3.jpg) no-repeat bottom left; background-size: cover; background-attachment: fixed` }}>
            
       
       <div className="text-center mb-12">            
-        <h3 className="mx-auto leading-tight font-pacifico text-neongreen text-4xl mb-[-25px]">
-          Dezenas de modelos validados para você
+        <h3 className="mx-auto leading-tight font-pacifico text-neongreen text-4xl mb-[-20px]">
+          Páginas validadas para você
         </h3>
-        <h2 className="mb-6 mx-auto font-oswald text-[106px] leading-tight text-white" style={{ textShadow: '5px 5px 5px rgba(0, 0, 0, 0.15)', letterSpacing: '-3px' }}>
+        <h2 className="mb-6 mx-auto font-oswald text-[96px] leading-tight text-white" style={{ textShadow: '5px 5px 5px rgba(0, 0, 0, 0.15)', letterSpacing: '-3px' }}>
           VENDER MUITO MAIS
         </h2>
         <div className="h-1 w-24 bg-neongreen mx-auto mb-6 rounded" />

@@ -2,7 +2,7 @@ import { Phone, Mail } from "lucide-react";
 
 const Footer = () => {
     return (
-        <footer className=" text-white pt-40 pb-52 bg-[#202632]" style={{ background: `url(${process.env.NEXT_PUBLIC_BASE_PATH || ''}/clients-background-final-home.jpg) no-repeat top center; background-size: cover; background-attachment: fixed` }}>
+        <footer className=" text-white pt-32 pb-44 bg-[#202632]" style={{ background: `url(${process.env.NEXT_PUBLIC_BASE_PATH || ''}/bg-geral3.jpg) no-repeat bottom left; background-size: cover; background-attachment: fixed` }}>
 
             <div className="max-w-7xl mx-auto sm:px-6 lg:px-8 text-center flex flex-col items-center gap-4">
 
@@ -15,7 +15,7 @@ const Footer = () => {
                 
                 <h2 className="text-white mt-6 mb-0">Pronto para conquistar mais clientes?</h2>
 
-                <p className="text-white text-xl mt-[-20px] mb-12">Se você chegou até aqui é porque nosso produto funciona!</p>
+                <p className="text-white text-xl mt-[-20px] mb-12">Entre em contato e vamos fazer uma simulação com sua marca totalmente GRÁTIS! 😎</p>
                 
                
                 <div className="flex justify-between portrait:flex-col portrait:items-center portrait:gap-4 text-center w-full">

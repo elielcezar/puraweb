@@ -12,7 +12,7 @@ const FAQ = () => {
   const faqs = [
     {
       question: "Quanto tempo leva para criar um site?",
-      answer: "O prazo médio é de 7 a 15 dias úteis, dependendo da complexidade do projeto. Sites institucionais simples podem ficar prontos em até uma semana, enquanto projetos mais elaborados podem levar um pouco mais."
+      answer: "O prazo varia dependendo da complexidade de cada projeto. Sites institucionais simples geralmente ficam prontos entre 3 a 5 dias, enquanto projetos mais elaborados podem levar até 1 mês."
     },
     {
       question: "O site será responsivo (mobile)?",
@@ -51,18 +51,18 @@ const FAQ = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:sticky lg:top-32"
+            className="lg:top-32"
           >
-            <h3 className="font-pacifico text-neongreen text-3xl mb-[-10px]">
-              Tire suas dúvidas
+            <h3 className="mx-auto leading-tight font-pacifico text-neongreen text-4xl mb-[-25px]">
+                Perguntas
             </h3>
-            <h2 className="font-oswald uppercase font-bold text-deepgray text-[48px] leading-tight mb-4">
-              Perguntas Frequentes
+            <h2 className="mb-6 mx-auto font-oswald text-[64px] md:text-[96px] leading-tight" style={{ textShadow: '5px 5px 5px rgba(0, 0, 0, 0.15)', letterSpacing: '-3px' }}>
+                Frequentes
             </h2>
             <div className="h-1 w-24 bg-neongreen mb-6 rounded" />
             <p className="text-muted-foreground text-lg leading-relaxed">
               Reunimos as principais dúvidas dos nossos clientes sobre criação de sites. 
-              Se não encontrar a resposta que procura, entre em contato conosco pelo WhatsApp.
+              Se você não encontrar a resposta que procura, entre em contato conosco pelo WhatsApp, será um prazer lhe atender.
             </p>
             
             {/* CTA WhatsApp */}
@@ -71,10 +71,10 @@ const FAQ = () => {
                 href="https://wa.me/5541999631609" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="btn-wpp inline-flex"
+                className="btn-wpp inline-flex bg-neongreen border-neongreen"
               >
                 <i className="fab fa-whatsapp text-2xl"></i>
-                <span>Fale conosco</span>
+                <span>Quero fazer um teste GRÁTIS!</span>
               </a>
             </div>
           </motion.div>
@@ -91,10 +91,10 @@ const FAQ = () => {
                 <AccordionItem 
                   key={index} 
                   value={`item-${index}`}
-                  className="bg-white rounded-lg border border-border overflow-hidden shadow-sm"
+                  className="bg-white rounded-sm border border-border overflow-hidden shadow-sm"
                 >
-                  <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-slate-100 transition-colors">
-                    <span className="text-lg font-semibold text-foreground pr-4">
+                  <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-slate-100 transition-all duration-300 data-[state=open]:bg-deepgray data-[state=open]:text-white data-[state=open]:hover:bg-deepgray">
+                    <span className="text-lg font-semibold pr-4">
                       {faq.question}
                     </span>
                   </AccordionTrigger>

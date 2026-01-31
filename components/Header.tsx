@@ -44,7 +44,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-[100] bg-black/75 backdrop-blur-sm max-w-[1100px] rounded-full mx-auto my-2 pl-2 pr-1 pt-0">
+    <header className="fixed top-3 left-0 right-0 z-[100] bg-[#141a26]/80 backdrop-blur-sm w-[90%] max-w-[1400px] rounded-full mx-auto pl-2 pr-0 pt-0">
       <nav className=" mx-auto px-4 py-3">
         <div className="flex items-center justify-between portrait:flex-col portrait:items-center portrait:gap-4">
           {/* Logo */}          
@@ -70,9 +70,9 @@ const Header = () => {
                 FAQ
               </Link>                                      
             </nav>          
-            <div className="text-white text-sm font-semibold hover:text-neongreen transition-colors uppercase bg-neongreen hover:bg-white text-white px-1 py-2 rounded-full">
-              <Link href="https://wa.me/5541999631609" target="_blank" rel="noopener noreferrer" className="text-white text-sm font-bold hover:text-neongreen transition-colors uppercase bg-neongreen hover:bg-white text-white px-4 py-2 rounded-full">      
-                (41) 99963.1609
+            <div>
+              <Link href="https://wa.me/5541999631609" target="_blank" rel="noopener noreferrer" className="text-white text-md font-bold transition-colors bg-neongreen hover:bg-primary text-white px-4 py-2 rounded-full hover:border-primary border-2 border-neongreen hover:border-white">      
+                Faça um teste, é grátis!
               </Link>
             </div>
           </div>

@@ -18,11 +18,11 @@ const Prevention = () => {
             <h3 className="mx-auto leading-tight font-pacifico text-neongreen text-4xl mb-[-25px]">
               Escolha o estilo que mais combina com
             </h3>
-            <h2 className="mb-6 mx-auto font-oswald text-[106px] leading-tight" style={{ textShadow: '5px 5px 5px rgba(0, 0, 0, 0.15)', letterSpacing: '-3px' }}>
+            <h2 className="mb-6 mx-auto font-oswald text-[96px] leading-tight" style={{ textShadow: '5px 5px 5px rgba(0, 0, 0, 0.15)', letterSpacing: '-3px' }}>
               a sua empresa
             </h2>
             <div className="h-1 w-24 bg-neongreen mx-auto mb-6 rounded" />
-            <p className="text-2xl text-primary max-w-3xl mx-auto">
+            <p className="text-2xl text-deepgray max-w-3xl mx-auto">
                 Temos modelos para todos os tipos de negócio, <br/>mas se você preferir, também <strong className="font-oswald uppercase">criamos seu site do zero</strong>.
               </p>
           </div>          

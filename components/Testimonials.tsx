@@ -1,210 +1,209 @@
 'use client';
+
 import { motion } from "framer-motion";
-import { Monitor, Zap, Cpu, Wrench, HardDrive, Thermometer, ChevronLeft, ChevronRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import useEmblaCarousel from 'embla-carousel-react';
-import { useCallback } from 'react';
-import AutoPlay from 'embla-carousel-autoplay';
 import { Star, Quote } from "lucide-react";
 
 const Testimonials = () => {
     const testimonials = [
         {
-            name: "Yulli Meireles",
-            role: "Empresária",
-            content: "Levei meu notebook para arrumar as dobradiças e o serviço ficou impecável. Super indico, atendimento e concerto rápido, super solicitos para explicar sobre o concerto!",
+            name: "Mariana Santos",
+            role: "Proprietária de Salão de Beleza",
+            content: "Meu salão ganhou uma presença online incrível! O site ficou lindo e minhas clientes adoraram poder agendar pelo WhatsApp direto da página. Já recebi várias clientes novas que me encontraram pelo Google.",
+            rating: 5,
+            location: "Curitiba, PR"
+        },
+        {
+            name: "Roberto Mendes",
+            role: "Advogado",
+            content: "Profissionalismo do início ao fim. O site transmite exatamente a seriedade que meu escritório precisa.",
             rating: 5,
             location: "São Paulo, SP"
         },
         {
-            name: "Leonardo Della Costa",
-            role: "Professora",
-            content: "Atendimento excepcional e muita qualidade de seriedade na prestação de serviço. Recomendo!",
+            name: "Fernanda Lima",
+            role: "Nutricionista",
+            content: "Finalmente tenho um site que mostra meu trabalho de forma profissional! A integração com o Instagram ficou perfeita e o botão do WhatsApp facilita muito o contato dos pacientes. Super recomendo a Pura Web!",
             rating: 5,
             location: "Belo Horizonte, MG"
         },
         {
-            name: "Álex Dias",
-            role: "Designer",
-            content: "Arrumaram 2 notebooks da minha família, ambos de reparo em placa.",
+            name: "Carlos Eduardo",
+            role: "Dono de Restaurante",
+            content: "O cardápio digital integrado ao site foi um diferencial enorme. Clientes consultam antes de vir e já chegam sabendo o que pedir.",
             rating: 5,
             location: "Rio de Janeiro, RJ"
         },
         {
-            name: "Carlos Oliveira",
-            role: "Gestor de TI",
-            content: "Atendimento corporativo impecável. Cuidam de toda frota de notebooks da empresa com rapidez e qualidade.",
+            name: "Juliana Ferreira",
+            role: "Personal Trainer",
+            content: "Eu tinha medo de investir em um site, mas a Pura Web me mostrou que era mais acessível do que eu imaginava. O resultado superou todas as expectativas! Meus alunos adoram acessar os treinos e tirar dúvidas pelo site.",
+            rating: 5,
+            location: "Porto Alegre, RS"
+        },
+        {
+            name: "André Souza",
+            role: "Fotógrafo",
+            content: "Meu portfólio online ficou simplesmente incrível. As fotos carregam rápido e o layout valoriza cada trabalho.",
+            rating: 5,
+            location: "Florianópolis, SC"
+        },
+        {
+            name: "Patricia Oliveira",
+            role: "Arquiteta",
+            content: "A equipe entendeu exatamente o que eu precisava. Um site elegante que mostra meus projetos de forma impactante. Já fechei 3 projetos novos com clientes que me encontraram pelo site!",
+            rating: 5,
+            location: "Curitiba, PR"
+        },
+        {
+            name: "Thiago Martins",
+            role: "Corretor de Imóveis",
+            content: "Antes eu dependia só de portais. Agora tenho meu próprio site com todos os imóveis e os clientes me veem como mais profissional.",
             rating: 5,
             location: "Brasília, DF"
         },
         {
-            name: "Leonardo Della Costa",
-            role: "Professora",
-            content: "Atendimento excepcional e muita qualidade de seriedade na prestação de serviço. Recomendo!",
+            name: "Camila Rocha",
+            role: "Confeiteira",
+            content: "Minha confeitaria cresceu demais depois do site! Consigo mostrar todos os bolos, doces e os clientes fazem encomenda direto pelo WhatsApp. O catálogo de produtos é atualizado facilmente. Melhor investimento que fiz!",
             rating: 5,
-            location: "Belo Horizonte, MG"
+            location: "Joinville, SC"
         },
         {
-            name: "Álex Dias",
-            role: "Designer",
-            content: "Arrumaram 2 notebooks da minha família, ambos de reparo em placa.",
+            name: "Lucas Almeida",
+            role: "Dentista",
+            content: "Atendimento excepcional! Tiraram todas as minhas dúvidas e entregaram um site moderno e funcional para meu consultório.",
             rating: 5,
-            location: "Rio de Janeiro, RJ"
+            location: "Campinas, SP"
         },
         {
-            name: "Carlos Oliveira",
-            role: "Gestor de TI",
-            content: "Atendimento corporativo impecável. Cuidam de toda frota de notebooks da empresa com rapidez e qualidade.",
+            name: "Renata Campos",
+            role: "Professora de Inglês",
+            content: "O site me ajudou a profissionalizar meu trabalho como professora particular. Agora tenho uma página com minha metodologia, valores e depoimentos de alunos. A credibilidade aumentou muito!",
             rating: 5,
-            location: "Brasília, DF"
+            location: "Curitiba, PR"
+        },
+        {
+            name: "Marcos Paulo",
+            role: "Mecânico",
+            content: "Nunca imaginei que uma oficina mecânica precisasse de site, mas depois que fiz, vi a diferença. Apareço no Google Maps e recebo clientes novos toda semana.",
+            rating: 5,
+            location: "Londrina, PR"
+        },
+        {
+            name: "Isabela Costa",
+            role: "Designer de Interiores",
+            content: "A Pura Web capturou perfeitamente a essência do meu trabalho. O site tem um visual sofisticado e moderno, exatamente como meus projetos. A galeria de fotos ficou espetacular e o carregamento é super rápido!",
+            rating: 5,
+            location: "São Paulo, SP"
+        },
+        {
+            name: "Ricardo Gomes",
+            role: "Personal Organizer",
+            content: "Site entregue antes do prazo e com qualidade impecável. O suporte pós-entrega também é excelente!",
+            rating: 5,
+            location: "Curitiba, PR"
+        },
+        {
+            name: "Amanda Ribeiro",
+            role: "Psicóloga",
+            content: "Precisava de um site acolhedor e profissional ao mesmo tempo, e foi exatamente o que recebi. Meus pacientes elogiam muito a facilidade de encontrar informações e agendar consultas. O investimento valeu cada centavo!",
+            rating: 5,
+            location: "Maringá, PR"
+        },
+        {
+            name: "Felipe Nascimento",
+            role: "Instrutor de Música",
+            content: "Agora meus alunos podem conhecer meu trabalho antes mesmo da primeira aula. O site mostra minha trajetória, os instrumentos que ensino e tem até vídeos de apresentações. Muito satisfeito!",
+            rating: 5,
+            location: "Curitiba, PR"
         }
     ];
 
-    // Configuração do Embla Carousel
-    const [emblaRef, emblaApi] = useEmblaCarousel(
-        {
-            loop: true,
-            align: 'center',
-            slidesToScroll: 1,
-        },
-        [
-            AutoPlay({
-                delay: 1500,
-                stopOnInteraction: true,
-                stopOnMouseEnter: true,
-            })
-        ]
-    );
-
-    // Funções de navegação
-    const scrollPrev = useCallback(() => {
-        if (emblaApi) emblaApi.scrollPrev();
-    }, [emblaApi]);
-
-    const scrollNext = useCallback(() => {
-        if (emblaApi) emblaApi.scrollNext();
-    }, [emblaApi]);
-   
-
     return (
-        <section id="servicos" className="py-20 px-10 bg-slate-50">
-            <div className="text-center mb-12">            
-                <h3 className="mx-auto leading-tight font-pacifico text-neongreen text-4xl mb-[-25px]">
-                Centenas de clientes
-                </h3>
-                <h2 className="mb-6 mx-auto font-oswald text-[106px] leading-tight" style={{ textShadow: '5px 5px 5px rgba(0, 0, 0, 0.15)', letterSpacing: '-3px' }}>
-                satisfeitos
-                </h2>
-                <div className="h-1 w-24 bg-neongreen mx-auto mb-6 rounded" />
-                <div className="inline-flex items-center gap-2 bg-card border border-border rounded-full px-6 py-3 shadow-sm mb-4">
-                            <Star className="w-7 h-7 fill-amber-400 text-amber-400 mx-0" />
-                            <Star className="w-7 h-7 fill-amber-400 text-amber-400 mx-0" />
-                            <Star className="w-7 h-7 fill-amber-400 text-amber-400 mx-0" />
-                            <Star className="w-7 h-7 fill-amber-400 text-amber-400 mx-0" />
-                            <Star className="w-7 h-7 fill-amber-400 text-amber-400 mx-0" />
-                            <p>
-                                <span className="font-semibold text-foreground text-3xl font-bold">4.8</span>
-                                <span className="font-semibold text-foreground text-lg font-normal">/5.0</span>
-                            </p>
-                        </div>
+        <section id="depoimentos" className="py-20 px-4 md:px-10">
+            <div className="container mx-auto">
+                {/* Header */}
+                <div className="text-center mb-10">            
+                    <h3 className="mx-auto leading-tight font-pacifico text-neongreen text-4xl mb-[-25px]">
+                        Centenas de clientes
+                    </h3>
+                    <h2 className="mb-6 mx-auto font-oswald text-[64px] md:text-[96px] leading-tight" style={{ textShadow: '5px 5px 5px rgba(0, 0, 0, 0.15)', letterSpacing: '-3px' }}>
+                        satisfeitos
+                    </h2>
+                    <div className="h-1 w-24 bg-neongreen mx-auto mb-6 rounded" />
+                    <div className="inline-flex items-center gap-2 bg-card border border-border rounded-full px-6 py-3 shadow-sm mb-0">
+                        <Star className="w-6 h-6 fill-amber-400 text-amber-400" />
+                        <Star className="w-6 h-6 fill-amber-400 text-amber-400" />
+                        <Star className="w-6 h-6 fill-amber-400 text-amber-400" />
+                        <Star className="w-6 h-6 fill-amber-400 text-amber-400" />
+                        <Star className="w-6 h-6 fill-amber-400 text-amber-400" />
+                        <p>
+                            <span className="text-foreground text-2xl font-bold">4.8</span>
+                            <span className="text-foreground text-md font-normal">/5.0</span>
+                        </p>
+                    </div>
+                </div>    
 
-            </div>    
-
-            {/* Carousel Container */}
-            <div className="relative mx-auto px-20">
-                {/* Navigation Buttons */}
-                <button
-                    onClick={scrollPrev}
-                    className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-12 h-12 bg-muted-foreground/50 text-accent-foreground rounded-full shadow-lg hover:bg-accent/90 transition-all duration-300 flex items-center justify-center portrait:hidden"
-                    aria-label="Anterior"
+                {/* Masonry Grid */}
+                <motion.div 
+                    className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6"
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
                 >
-                    <ChevronLeft className="w-6 h-6" />
-                </button>
+                    {testimonials.map((testimonial, index) => (
+                        <motion.div
+                            key={index}
+                            className="break-inside-avoid mb-6"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.4, delay: index * 0.05 }}
+                        >
+                            <div className="group bg-white p-6 border border-border hover:border-neongreen rounded-sm shadow-sm hover:shadow-lg transition-all duration-300 relative">
+                                <Quote className="absolute top-4 right-4 w-8 h-8 text-deepgray/10" />
 
-                <button
-                    onClick={scrollNext}
-                    className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-12 h-12 bg-muted-foreground/50 text-accent-foreground rounded-full shadow-lg hover:bg-accent/90 transition-all duration-300 flex items-center justify-center portrait:hidden"
-                    aria-label="Próximo"
-                >
-                    <ChevronRight className="w-6 h-6" />
-                </button>
-
-                {/* Embla Carousel */}
-                <div className="overflow-hidden" ref={emblaRef}>
-                    <div className="flex gap-6 pr-8 pl-8">
-                        {testimonials.map((testimonial, index) => (
-                            <div
-                                key={index}
-                                className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_calc(50%-12px)] lg:flex-[0_0_calc(25%-16px)]"
-                            >
-                                <div className="group bg-card p-6 border-2 border-white hover:border-2 hover:border-muted-foreground/40 shadow-xl transition-all duration-300 h-full relative">
-                                    <Quote className="absolute top-6 right-6 w-10 h-10 text-neongreen/20" />
-
-                                    <div className="flex items-center mb-4 gap-4">
-                                        <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
-                                            <span className="text-accent font-bold text-lg">
-                                                {testimonial.name.charAt(0)}
-                                            </span>
-                                        </div>
-                                        <div>
-                                            <h4 className="font-semibold text-gray-800">{testimonial.name}</h4>
-                                            <div className="flex text-yellow-500 text-sm">
-                                                {[...Array(testimonial.rating)].map((_, i) => (
-                                                    <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
-                                                ))}
-                                            </div>
-                                        </div>
+                                <div className="flex items-center mb-4 gap-3">
+                                    <div className="w-11 h-11 bg-neongreen/10 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <span className="text-neongreen font-bold text-lg">
+                                            {testimonial.name.charAt(0)}
+                                        </span>
                                     </div>
-                                    <p className="text-gray-600 italic">"{testimonial.content}"</p>
+                                    <div>
+                                        <h4 className="font-semibold text-foreground text-md">{testimonial.name}</h4>                                        
+                                    </div>
+                                </div>
 
+                                <p className="text-muted-foreground text-sm leading-relaxed mb-4">"{testimonial.content}"</p>
+
+                                <div className="flex items-center justify-between">
+                                    <div className="flex">
+                                        {[...Array(testimonial.rating)].map((_, i) => (
+                                            <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                                        ))}
+                                    </div>
+                                    <span className="text-xs text-muted-foreground">{testimonial.location}</span>
                                 </div>
                             </div>
-                        ))}
-                    </div>
+                        </motion.div>
+                    ))}
+                </motion.div>
 
-                    {/* Google Reviews Badge */}
-                    <div className="text-center mt-12 flex flex-col items-center">
-                        
-                        <p id="reviews-count" className="text-gray-600">Baseado em mais de 850 avaliações no Google</p>
-
-                        <div className="flex items-center justify-center mt-4 space-x-4 portrait:flex-col">
-                            <div className="bg-white px-4 pt-2 pb-1 rounded-lg shadow-md border">
-                                <div className="flex items-center">
-                                    <img
-                                        src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/google-logo.png`}
-                                        alt="Google"
-                                        width="90"
-                                        height="30"
-                                        className="mr-2"
-                                    />
-                                    <span className="text-sm font-medium text-gray-700">Empresa Verificada</span>
-                                </div>
-                            </div>
-                        </div>
+                {/* Google Reviews Badge */}
+                <div className="text-center mt-10 flex flex-col items-center">
+                    <p className="text-muted-foreground mb-4">Avaliações verificadas de clientes reais</p>
+                    <div className="bg-white px-6 py-3 rounded-full shadow-md border inline-flex items-center gap-3">
+                        <img
+                            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/google-logo.png`}
+                            alt="Google"
+                            width="80"
+                            height="26"
+                        />
+                        <span className="text-sm font-medium text-foreground">Empresa Verificada</span>
                     </div>
                 </div>
-
-                {/* Mobile Navigation Buttons */}
-                <div className="flex justify-center gap-4 mt-6 lg:hidden">
-                    <button
-                        onClick={scrollPrev}
-                        className="w-10 h-10 bg-accent text-accent-foreground rounded-full shadow-lg hover:bg-accent/90 transition-all duration-300 flex items-center justify-center"
-                        aria-label="Anterior"
-                    >
-                        <ChevronLeft className="w-5 h-5" />
-                    </button>
-                    <button
-                        onClick={scrollNext}
-                        className="w-10 h-10 bg-accent text-accent-foreground rounded-full shadow-lg hover:bg-accent/90 transition-all duration-300 flex items-center justify-center"
-                        aria-label="Próximo"
-                    >
-                        <ChevronRight className="w-5 h-5" />
-                    </button>
-                </div>
-
             </div>
-
-
         </section>
     );
 };

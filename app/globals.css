@@ -200,5 +200,5 @@ All colors MUST be HSL.
 }
 
 .numbers-description strong {
-  @apply text-5xl font-extrabold tracking-tight text-neongreen inline-block w-full mt-2;
+  @apply text-5xl font-extrabold tracking-tight text-neongreen inline-block w-full mt-4;
 }

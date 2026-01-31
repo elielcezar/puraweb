@@ -18,7 +18,14 @@ const BrandsCarousel = () => {
     { name: 'Gazeta', image: 'logo-gazeta.webp' },
     { name: 'Mc4', image: 'logo-mc4.webp' },
     { name: 'Uninter', image: 'logo-uninter.webp' },
-    { name: 'Subway', image: 'logo-sub.webp' }        
+    { name: 'Subway', image: 'logo-sub.webp' },
+    { name: 'Americanas', image: 'logo-americanas.webp' },    
+    { name: 'Assai', image: 'logo-assai.webp' },
+    { name: 'Buscape', image: 'logo-buscape.webp' },
+    { name: 'Gazeta', image: 'logo-gazeta.webp' },
+    { name: 'Mc4', image: 'logo-mc4.webp' },
+    { name: 'Uninter', image: 'logo-uninter.webp' },
+    { name: 'Subway', image: 'logo-sub.webp' }                
   ];
 
 

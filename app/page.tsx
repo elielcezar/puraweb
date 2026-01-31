@@ -14,6 +14,7 @@ import Services from "@/components/Services";
 import Contact from "@/components/Contact";
 import Included from "@/components/Included";
 import Numbers from "@/components/Numbers";
+import FAQ from "@/components/FAQ";
 
 export default function Home() {
   return (
@@ -26,7 +27,8 @@ export default function Home() {
         <Prevention />
         <Services />
         <Numbers />                         
-        <Testimonials />             
+        <Testimonials />
+        <FAQ />             
         <BrandsCarousel /> 
       </main>      
       <Footer />

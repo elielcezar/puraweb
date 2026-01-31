@@ -44,17 +44,17 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-[100] bg-black/75 backdrop-blur-sm max-w-[900px] rounded-full mx-auto my-2 pl-2 pr-0 pt-0">
-      <nav className=" mx-auto px-3 py-2">
+    <header className="fixed top-0 left-0 right-0 z-[100] bg-black/75 backdrop-blur-sm max-w-[1100px] rounded-full mx-auto my-2 pl-2 pr-1 pt-0">
+      <nav className=" mx-auto px-4 py-3">
         <div className="flex items-center justify-between portrait:flex-col portrait:items-center portrait:gap-4">
           {/* Logo */}          
           <div className="flex items-center gap-2 justify-between w-full">                 
             <img 
               src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logo-pura.webp`}
               alt="Logo" 
-              width="100" 
-              height="47" 
-              className="w-24 mt-[-12px]"              
+              width="121" 
+              height="57" 
+              className="mt-[-16px]"              
             />
             <nav className="flex items-center gap-6">
               <Link href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/`} className="text-white text-sm font-semibold hover:text-neongreen transition-colors uppercase">      
@@ -68,11 +68,13 @@ const Header = () => {
               </Link>
               <Link href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/franquia`} className="text-white text-sm font-semibold hover:text-neongreen transition-colors uppercase">      
                 FAQ
-              </Link>                        
-              <Link href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/contato`} className="text-white text-sm font-bold hover:text-neongreen transition-colors uppercase bg-neongreen hover:bg-white text-white px-4 py-2 rounded-full">      
-                Contato
-              </Link>
+              </Link>                                      
             </nav>          
+            <div className="text-white text-sm font-semibold hover:text-neongreen transition-colors uppercase bg-neongreen hover:bg-white text-white px-1 py-2 rounded-full">
+              <Link href="https://wa.me/5541999631609" target="_blank" rel="noopener noreferrer" className="text-white text-sm font-bold hover:text-neongreen transition-colors uppercase bg-neongreen hover:bg-white text-white px-4 py-2 rounded-full">      
+                (41) 99963.1609
+              </Link>
+            </div>
           </div>
 
 

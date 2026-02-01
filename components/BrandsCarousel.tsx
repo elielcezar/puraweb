@@ -4,24 +4,24 @@ import Image from 'next/image';
 
 const BrandsCarousel = () => {
   
-  const brands = [    
-    { name: 'Americanas', image: 'logo-americanas.webp' },    
+  const brands = [        
     { name: 'Assai', image: 'logo-assai.webp' },
     { name: 'Buscape', image: 'logo-buscape.webp' },
+    { name: 'Americanas', image: 'logo-americanas.webp' },    
     { name: 'Gazeta', image: 'logo-gazeta.webp' },
     { name: 'Mc4', image: 'logo-mc4.webp' },
     { name: 'Uninter', image: 'logo-uninter.webp' },
-    { name: 'Subway', image: 'logo-sub.webp' },
-    { name: 'Americanas', image: 'logo-americanas.webp' },    
+    { name: 'Subway', image: 'logo-sub.webp' },    
     { name: 'Assai', image: 'logo-assai.webp' },
     { name: 'Buscape', image: 'logo-buscape.webp' },
+    { name: 'Americanas', image: 'logo-americanas.webp' },    
     { name: 'Gazeta', image: 'logo-gazeta.webp' },
     { name: 'Mc4', image: 'logo-mc4.webp' },
     { name: 'Uninter', image: 'logo-uninter.webp' },
-    { name: 'Subway', image: 'logo-sub.webp' },
-    { name: 'Americanas', image: 'logo-americanas.webp' },    
+    { name: 'Subway', image: 'logo-sub.webp' },     
     { name: 'Assai', image: 'logo-assai.webp' },
     { name: 'Buscape', image: 'logo-buscape.webp' },
+    { name: 'Americanas', image: 'logo-americanas.webp' },   
     { name: 'Gazeta', image: 'logo-gazeta.webp' },
     { name: 'Mc4', image: 'logo-mc4.webp' },
     { name: 'Uninter', image: 'logo-uninter.webp' },
@@ -33,8 +33,8 @@ const BrandsCarousel = () => {
   return (
     <section id="brands" className="py-20 bg-background">
        <div className="text-center mb-16">                                   
-       <h3 className="mx-auto leading-tight font-pacifico text-neongreen text-4xl mb-[-25px]">
-                Nós já trabalhamos com
+       <h3 className="mx-auto leading-tight font-pacifico text-neongreen text-[2.5rem] mb-[-20px]">
+                Nossa equipe já passou por
             </h3>
             <h2 className="mb-4 mx-auto font-oswald text-[64px] md:text-[96px] leading-tight" style={{ textShadow: '5px 5px 5px rgba(0, 0, 0, 0.15)', letterSpacing: '-3px' }}>
                 Grandes Marcas

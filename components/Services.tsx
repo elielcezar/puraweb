@@ -61,7 +61,7 @@ const Services = () => {
       AutoPlay({ 
         delay: 1500,
         stopOnInteraction: true,
-        stopOnMouseEnter: true,
+        stopOnMouseEnter: false,
       })
     ]
   );
@@ -77,11 +77,11 @@ const Services = () => {
 
 
   return (
-    <section className="py-32 text-primary-foreground bg-[#202632]" style={{ background: `url(${process.env.NEXT_PUBLIC_BASE_PATH || ''}/bg-geral3.jpg) no-repeat bottom left; background-size: cover; background-attachment: fixed` }}>
+    <section className="pt-32 pb-20 text-primary-foreground bg-[#202632]" style={{ background: `url(${process.env.NEXT_PUBLIC_BASE_PATH || ''}/bg-geral3.jpg) no-repeat bottom left; background-size: cover; background-attachment: fixed` }}>
            
       
       <div className="text-center mb-12">            
-        <h3 className="mx-auto leading-tight font-pacifico text-neongreen text-4xl mb-[-20px]">
+        <h3 className="mx-auto leading-tight font-pacifico text-neongreen text-[2.5rem] mb-[-20px]">
           Páginas validadas para você
         </h3>
         <h2 className="mb-6 mx-auto font-oswald text-[96px] leading-tight text-white" style={{ textShadow: '5px 5px 5px rgba(0, 0, 0, 0.15)', letterSpacing: '-3px' }}>
@@ -94,11 +94,11 @@ const Services = () => {
       </div>          
 
       {/* Carousel Container */}
-        <div className="relative mx-auto">
+        <div className="relative mx-auto mb-12">
           {/* Navigation Buttons */}
           <button
             onClick={scrollPrev}
-            className="absolute left-10 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-12 h-12 bg-accent text-accent-foreground rounded-full shadow-lg hover:bg-accent/90 transition-all duration-300 flex items-center justify-center portrait:hidden"
+            className="absolute left-10 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-16 h-16 border-2 bg-deepgray/70 border-white text-accent-foreground shadow-lg hover:bg-neongreen transition-all duration-300 flex items-center justify-center portrait:hidden"
             aria-label="Anterior"
           >
             <ChevronLeft className="w-6 h-6" />
@@ -106,7 +106,7 @@ const Services = () => {
 
           <button
             onClick={scrollNext}
-            className="absolute right-10 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-12 h-12 bg-accent text-accent-foreground rounded-full shadow-lg hover:bg-accent/90 transition-all duration-300 flex items-center justify-center portrait:hidden"
+            className="absolute right-10 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-16 h-16 border-2 bg-deepgray/70 border-white text-accent-foreground shadow-lg hover:bg-neongreen transition-all duration-300 flex items-center justify-center portrait:hidden"
             aria-label="Próximo"
           >
             <ChevronRight className="w-6 h-6" />
@@ -142,6 +142,20 @@ const Services = () => {
           </div>
           
         </div>  
+
+        {/* CTA WhatsApp */}
+        <div className="flex justify-center gap-8 w-full max-w-[700px] mx-auto">
+              <a  href="#" target="_blank" rel="noopener noreferrer" className="py-4 px-8 btn-wpp bg-transparent border-2 border-neongreen hover:text-white hover:bg-neongreen hover:border-neongreen hover:shadow-[0px_5px_25px_rgb(23_207_198_/_50%)] transition-all duration-300">
+                <i className="fa-regular fa-pen-to-square text-2xl"></i>
+                <span>Ver todos os modelos</span>
+              </a>
+
+              <a  href="https://wa.me/5541999631609" target="_blank" rel="noopener noreferrer" className="py-4 px-8 btn-wpp bg-transparent border-2 border-neongreen hover:text-white hover:bg-neongreen hover:border-neongreen hover:shadow-[0px_5px_25px_rgb(23_207_198_/_50%)] transition-all duration-300">
+                <i className="fab fa-whatsapp text-2xl"></i>
+                <span>Solicite uma simulação GRÁTIS!</span>
+              </a>
+
+            </div>      
       
     </section>
   );

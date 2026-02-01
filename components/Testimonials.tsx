@@ -124,7 +124,7 @@ const Testimonials = () => {
             <div className="container mx-auto">
                 {/* Header */}
                 <div className="text-center mb-10">            
-                    <h3 className="mx-auto leading-tight font-pacifico text-neongreen text-4xl mb-[-25px]">
+                    <h3 className="mx-auto leading-tight font-pacifico text-neongreen text-[2.5rem] mb-[-20px]">
                         Centenas de clientes
                     </h3>
                     <h2 className="mb-6 mx-auto font-oswald text-[64px] md:text-[96px] leading-tight" style={{ textShadow: '5px 5px 5px rgba(0, 0, 0, 0.15)', letterSpacing: '-3px' }}>

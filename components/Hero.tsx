@@ -73,19 +73,27 @@ const Services = () => {
                         <h3 className="text-[56px] text-neongreen font-pacifico mb-[-40px]">Mais cliques, mais</h3>
                         <p className="text-[140px] text-white font-oswald mt-0 font-bold tracking-tight" style={{ textShadow: '5px 5px 5px rgba(0, 0, 0, 0.15)', letterSpacing: '-3px' }}>VENDAS</p>
                         <p className="text-white text-3xl font-normal">Atraia clientes qualificados com um site feito para converter</p>  
-                        <div className="cta-box flex gap-4 mt-10">
-                          <Button className="btn-primary border-2 border-white rounded-none px-12 py-6 text-lg font-normal bg-transparent text-white hover:bg-white hover:text-black">Contato</Button>
-                          <Button className="btn-primary border-2 border-white rounded-none px-12 py-6 text-lg font-normal bg-transparent text-white hover:bg-white hover:text-black">Portfólio</Button>
-                        </div>
+                        {/* CTA WhatsApp */}
+                        <div className="flex justify-center gap-8 w-full max-w-[700px] mx-auto mt-10">
+                          <a  href="#" target="_blank" rel="noopener noreferrer" className="bg-transparent text-white border-2 border-white py-4 px-8 btn-wpp hover:bg-white hover:text-deepgray hover:border-white transition-all duration-300 [box-shadow:0px_5px_5px_rgb(0_0_0_/_15%)]">
+                            <i className="fa-regular fa-pen-to-square text-2xl"></i>
+                            <span>Ver todos os modelos</span>
+                          </a>
+
+                          <a  href="https://wa.me/5541999631609" target="_blank" rel="noopener noreferrer" className="bg-transparent text-white border-2 border-white py-4 px-8 btn-wpp hover:bg-neongreen hover:text-white hover:border-neongreen shadow-sm transition-all duration-300 [box-shadow:0px_5px_5px_rgb(0_0_0_/_15%)]">
+                            <i className="fab fa-whatsapp text-2xl"></i>
+                            <span>Solicite uma simulação GRÁTIS!</span>
+                          </a>
+                        </div>    
                     
                   </div>
                 </div>
 
                 <div key="03" className="flex-[0_0_100%] flex items-center justify-center bg-[#3d204e] min-h-[800px]">
                   <div className="flex items-center justify-center flex-col p-6 transition-all duration-300 h-full w-full" style={{ background: `url(${process.env.NEXT_PUBLIC_BASE_PATH || ''}/background1.jpg) no-repeat center center; background-size: cover` }}>                    
-                    <h3 className="text-[56px] text-white font-pacifico mb-[-40px]">Seu site na internet</h3>
-                    <p className="text-[140px] text-white font-oswald mt-0 font-bold tracking-tight" style={{ textShadow: '5px 5px 5px rgba(0, 0, 0, 0.15)', letterSpacing: '-3px' }}>MAIS PROFISSIONAL</p>
-                    <p className="text-white text-3xl font-normal">Com o melhor custo-benefício do mercado</p>               
+                    <h3 className="text-[56px] text-white font-pacifico mb-[-40px]">Investimento em</h3>
+                    <p className="text-[140px] text-white font-oswald mt-0 font-bold tracking-tight" style={{ textShadow: '5px 5px 5px rgba(0, 0, 0, 0.15)', letterSpacing: '-3px' }}>DESIGN PREMIUM</p>
+                    <p className="text-white text-3xl font-normal">Aumenta a percepção de valor do seu produto</p>               
                   </div>
                 </div>
 

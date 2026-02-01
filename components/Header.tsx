@@ -61,17 +61,17 @@ const Header = () => {
                 Quem Somos
               </Link>
               <Link href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/sobre`} className="text-white text-sm font-semibold hover:text-neongreen transition-colors uppercase">      
-                Nossos Serviços
+                Nossos Sites
               </Link>
               <Link href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/sobre`} className="text-white text-sm font-semibold hover:text-neongreen transition-colors uppercase">      
                 Portfólio
               </Link>
               <Link href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/franquia`} className="text-white text-sm font-semibold hover:text-neongreen transition-colors uppercase">      
-                FAQ
+                Como Funciona
               </Link>                                      
             </nav>          
             <div>
-              <Link href="https://wa.me/5541999631609" target="_blank" rel="noopener noreferrer" className="text-white text-md font-bold transition-colors bg-neongreen hover:bg-primary text-white px-4 py-2 rounded-full hover:border-primary border-2 border-neongreen hover:border-white">      
+              <Link href="https://wa.me/5541999631609" target="_blank" rel="noopener noreferrer" className="text-white text-md font-bold transition-colors bg-neongreen hover:bg-deepgray text-white px-4 py-2 rounded-full border-2 border-neongreen hover:border-white">      
                 Faça um teste, é grátis!
               </Link>
             </div>

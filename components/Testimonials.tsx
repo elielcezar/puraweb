@@ -3,6 +3,14 @@
 import { motion } from "framer-motion";
 import { Star, Quote } from "lucide-react";
 
+type Testimonial = {
+    name: string;
+    role: string;
+    content: string;
+    rating: number;
+    location: string;
+};
+
 const Testimonials = () => {
     const testimonials = [
         {
@@ -119,15 +127,47 @@ const Testimonials = () => {
         }
     ];
 
+    
+const TestimonialCard = ({ testimonial, className }: { testimonial: Testimonial; className?: string }) => (
+    <div className={className}>
+        <div className="group bg-white p-6 border border-border hover:border-neongreen rounded-sm shadow-sm hover:shadow-lg transition-all duration-300 relative">
+            <Quote className="absolute top-4 right-4 w-8 h-8 text-deepgray/10" />
+
+            <div className="flex items-center mb-4 gap-3">
+                <div className="w-11 h-11 bg-neongreen/10 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-neongreen font-bold text-lg">
+                        {testimonial.name.charAt(0)}
+                    </span>
+                </div>
+                <div>
+                    <h4 className="font-semibold text-foreground text-md">{testimonial.name}</h4>
+                </div>
+            </div>
+
+            <p className="text-muted-foreground text-sm leading-relaxed mb-4">"{testimonial.content}"</p>
+
+            <div className="flex items-center justify-between">
+                <div className="flex">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                    ))}
+                </div>
+                <span className="text-xs text-muted-foreground">{testimonial.location}</span>
+            </div>
+        </div>
+    </div>
+);
+
+
     return (
-        <section id="depoimentos" className="py-20 px-4 md:px-10">
-            <div className="container mx-auto">
+        <section id="depoimentos" className="py-20 md:px-10">
+            <div className="container mx-auto portrait:px-0 portrait:mx-0">
                 {/* Header */}
-                <div className="text-center mb-10">            
-                    <h3 className="mx-auto leading-tight font-pacifico text-neongreen text-[2.5rem] mb-[-20px]">
+                <div className="text-center mb-10 portrait:px-4">            
+                    <h3 className="mx-auto leading-tight font-pacifico text-neongreen text-[2.5rem] mb-[-20px] portrait:text-[1.75rem] portrait:mb-[-10px]">
                         Centenas de clientes
                     </h3>
-                    <h2 className="mb-6 mx-auto font-oswald text-[64px] md:text-[96px] leading-tight" style={{ textShadow: '5px 5px 5px rgba(0, 0, 0, 0.15)', letterSpacing: '-3px' }}>
+                    <h2 className="mb-6 mx-auto font-oswald text-[64px] md:text-[96px] leading-tight portrait:text-[58px]" style={{ textShadow: '5px 5px 5px rgba(0, 0, 0, 0.15)', letterSpacing: '-3px' }}>
                         satisfeitos
                     </h2>
                     <div className="h-1 w-24 bg-neongreen mx-auto mb-6 rounded" />
@@ -144,54 +184,49 @@ const Testimonials = () => {
                     </div>
                 </div>    
 
-                {/* Masonry Grid */}
-                <motion.div 
-                    className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6"
-                    initial={{ opacity: 0, y: 40 }}
+                {/* Mobile: horizontal scroll (one full card + peek of next) */}
+                <motion.div
+                    className="md:hidden flex overflow-x-auto snap-x snap-mandatory ml-2 gap-4 pb-2 scrollbar-hide"
+                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
                     {testimonials.map((testimonial, index) => (
-                        <motion.div
+                        <TestimonialCard
                             key={index}
-                            className="break-inside-avoid mb-6"
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.4, delay: index * 0.05 }}
-                        >
-                            <div className="group bg-white p-6 border border-border hover:border-neongreen rounded-sm shadow-sm hover:shadow-lg transition-all duration-300 relative">
-                                <Quote className="absolute top-4 right-4 w-8 h-8 text-deepgray/10" />
-
-                                <div className="flex items-center mb-4 gap-3">
-                                    <div className="w-11 h-11 bg-neongreen/10 rounded-full flex items-center justify-center flex-shrink-0">
-                                        <span className="text-neongreen font-bold text-lg">
-                                            {testimonial.name.charAt(0)}
-                                        </span>
-                                    </div>
-                                    <div>
-                                        <h4 className="font-semibold text-foreground text-md">{testimonial.name}</h4>                                        
-                                    </div>
-                                </div>
-
-                                <p className="text-muted-foreground text-sm leading-relaxed mb-4">"{testimonial.content}"</p>
-
-                                <div className="flex items-center justify-between">
-                                    <div className="flex">
-                                        {[...Array(testimonial.rating)].map((_, i) => (
-                                            <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
-                                        ))}
-                                    </div>
-                                    <span className="text-xs text-muted-foreground">{testimonial.location}</span>
-                                </div>
-                            </div>
-                        </motion.div>
+                            testimonial={testimonial}
+                            className="snap-start flex-shrink-0 w-[85vw] max-w-[340px]"
+                        />
                     ))}
                 </motion.div>
 
+                {/* Desktop: masonry grid */}
+                <div className="hidden md:block testimonials-masonry">
+                    <motion.div
+                        className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6"
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                    >
+                        {testimonials.map((testimonial, index) => (
+                            <motion.div
+                                key={index}
+                                className="break-inside-avoid mb-6"
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.4, delay: index * 0.05 }}
+                            >
+                                <TestimonialCard testimonial={testimonial} />
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                </div>
+
                 {/* Google Reviews Badge */}
-                <div className="text-center mt-10 flex flex-col items-center">
+                <div className="text-center mt-4 flex flex-col items-center">
                     <p className="text-muted-foreground mb-4">Avaliações verificadas de clientes reais</p>
                     <div className="bg-white px-6 py-3 rounded-full shadow-md border inline-flex items-center gap-3">
                         <img

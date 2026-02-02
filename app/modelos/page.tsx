@@ -37,25 +37,25 @@ const models = [
     id: 1,
     name: "Modelo 1",
     description: "Descrição do modelo 1",
-    image: "/modelos/modelo01.webp",
+    image: "/modelos/modelo02.webp",
   },
   {
     id: 1,
     name: "Modelo 1",
     description: "Descrição do modelo 1",
-    image: "/modelos/modelo01.webp",
+    image: "/modelos/modelo03.webp",
   },
   {
     id: 1,
     name: "Modelo 1",
     description: "Descrição do modelo 1",
-    image: "/modelos/modelo01.webp",
+    image: "/modelos/modelo04.webp",
   },
   {
     id: 1,
     name: "Modelo 1",
     description: "Descrição do modelo 1",
-    image: "/modelos/modelo01.webp",
+    image: "/modelos/modelo05.webp",
   },
   {
     id: 1,
@@ -88,23 +88,23 @@ export default function ModelosPage() {
           </div>         
 
             <div className="flex gap-12 mt-10 mb-20 text-center text-white text-md font-semibold">
-                <p className="flex-1 flex flex-col items-center justify-center max-w-[350px] mx-auto">                                    
+                <p className="flex-1 flex flex-col items-center justify-center max-w-[380px] mx-auto">                                    
                   <div className="w-20 h-20 flex items-center justify-center mx-auto mb-4 bg-neongreen rounded-full mt-[-70px] relative z-10">
                     <PointerIcon className="w-10 h-10 text-white" />
                   </div>
-                  <span>Você escolhe os modelos que fazem mais sentido para o seu negócio</span>
+                  <span><strong className="text-neongreen text-3xl text-oswald">1.</strong> Você escolhe os modelos que fazem mais sentido para o seu negócio</span>
                 </p>
-                <p className="flex-1 flex flex-col items-center justify-center max-w-[350px] mx-auto">                  
+                <p className="flex-1 flex flex-col items-center justify-center max-w-[380px] mx-auto">                  
                   <div className="w-20 h-20 flex items-center justify-center mx-auto mb-4 bg-neongreen rounded-full mt-[-70px] relative z-10">
                     <BookImage className="w-10 h-10 text-white" />
                   </div>
-                  <span>Nós pegamos o melhor de cada um e criamos um projeto personalizado para você</span>
+                  <span><strong className="text-neongreen text-3xl text-oswald">2.</strong> Nós fazemos as adaptações necessárias e criamos um projeto personalizado para você</span>
                 </p>
-                <p className="flex-1 flex flex-col items-center justify-center max-w-[350px] mx-auto">                  
+                <p className="flex-1 flex flex-col items-center justify-center max-w-[380px] mx-auto">                  
                   <div className="w-20 h-20 flex items-center justify-center mx-auto mb-4 bg-neongreen rounded-full mt-[-70px] relative z-10">
                     <Globe className="w-10 h-10 text-white" />
                   </div>
-                  <span>Nós colocamos no ar configurado e otimizado para você começar a vender</span>
+                  <span><strong className="text-neongreen text-3xl text-oswald">3.</strong> Nós colocamos no ar configurado e otimizado para você começar a vender</span>
                 </p>
               </div>          
             </div>      

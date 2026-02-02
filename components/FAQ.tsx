@@ -71,7 +71,7 @@ const FAQ = () => {
                 href="https://wa.me/5541999631609" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="btn-wpp inline-flex bg-neongreen border-neongreen"
+                className="btn-wpp inline-flex bg-neongreen border-neongreen portrait:w-full"
               >
                 <i className="fab fa-whatsapp text-2xl"></i>
                 <span>Quero fazer um teste GRÁTIS!</span>

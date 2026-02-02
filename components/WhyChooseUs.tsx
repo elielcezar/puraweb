@@ -7,7 +7,11 @@ import { motion } from "framer-motion";
 const WhyChooseUs = () => {  
 
   return (
-    <section id="sobre" className="py-20 portrait:py-0" style={{ background: `url(${process.env.NEXT_PUBLIC_BASE_PATH || ''}/img_88.jpg) no-repeat top right; background-size: cover` }}>
+    <section
+      id="sobre"
+      className="why-choose-us-bg py-20"
+      style={{ ['--why-choose-us-bg' as string]: `url(${process.env.NEXT_PUBLIC_BASE_PATH || ''}/img_88.jpg)` }}
+    >
       <div className="container mx-auto px-4 flex portrait:flex-col gap-12">       
 
         <motion.div 
@@ -17,34 +21,30 @@ const WhyChooseUs = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >       
-             <h2 className="text-foreground mb-5 leading-tight flex items-center gap-3 tracking-tight text-5xl font-bold">
-            Somos a
-            <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logo2.png`} alt="Pura Web" className="mt-[-3px]"/>
+            <h2 className="text-deepgray mb-5 leading-tight flex items-center gap-3 tracking-tight text-5xl font-bold portrait:text-3xl">
+              Somos a
+              <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logo2.png`} alt="Pura Web" className="mt-[-3px]"/>
             </h2>            
             
-            <p className="text-[1.95rem] leading-tight text-primary leading-relaxed mb-6 font-oswald">              
+            <p className="text-[1.95rem] leading-tight text-   leading-relaxed mb-6 font-oswald">              
               Somos especialistas em criar sites ultra rápidos, com design premium e que funcionam como verdadeiras máquinas de vendas.
             </p>
-            <p className="text-[1.15rem] font-normal text-muted-foreground mb-4">    
-              <strong className="text-deepgray">Sites feitos para converter:</strong> temos centenas de modelos pré-construídos e validados para todos os tipos de negócio. 
-            </p>
-            {/*<p className="text-[1.15rem] font-normal text-muted-foreground mb-4">            
-              Na Pura Web unimos agilidade e eficiência em um processo de criação simplificado para entregar resultados reais. 
-            </p>*/}
-            <p className="text-[1.15rem] font-normal text-muted-foreground mb-4">            
+
+            <p className="text-[1.15rem] text-deepgray font-normal mb-4 portrait:text-md">    
+              <strong className="text-deepgray">Sites feitos para converter:</strong> utilizamos modelos pré-construídos e validados para todos os tipos de negócio. 
+            </p>          
+            <p className="text-[1.15rem] text-deepgray font-normal mb-4 portrait:text-md">            
               Nosso processo de criação simplificado reúne agilidade e eficiência para entregar resultados reais. Aqui você pode ter a certeza de que seu site será entregue no prazo e com a qualidade que você precisa.
             </p>
 
-            <p className="text-[1.15rem] font-normal text-muted-foreground mb-4">     
+            <p className="text-[1.15rem] text-deepgray font-normal mb-4 portrait:text-md">     
               Na <strong  className="text-deepgray">Pura Web</strong> acreditamos que toda empresa merece ter uma presença digital de alto nível sem precisar investir fortunas.
-            </p>    
-
-            
+            </p>               
           
         </motion.div>
 
         <motion.div 
-          className="flex-1 max-w-lg flex items-center justify-center relative overflow-hidden shadow-xl"
+          className="flex-1 max-w-lg flex items-center justify-center relative overflow-hidden shadow-xl portrait:hidden"
           initial={{ opacity: 0, x: 60 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}

@@ -17,7 +17,7 @@ All colors MUST be HSL.
     --deepblue: #193061;  
     --blue: #0053b1;
     --lightblue: #4f9ad2;  
-    --neongreen: 168 80% 45%;  
+    --neongreen: 168 82% 44%;  
     --neonred: 338 69% 48%;  
     --neonblue: 209 80% 45%;  
 
@@ -144,6 +144,20 @@ All colors MUST be HSL.
   .btn-wpp{
     @apply flex items-center justify-center bg-green-500 hover:bg-deepgray transition-colors hover:cursor-pointer border-2 border-green-500 hover:border-deepgray px-6 py-2 text-white text-lg tracking-tight font-semibold rounded-md mx-auto z-50 gap-2;
   }
+
+  /* WhyChooseUs: white on mobile, background image on desktop (--why-choose-us-bg set inline) */
+  .why-choose-us-bg {
+    background-color: hsl(var(--background));
+  }
+  @media (min-width: 768px) {
+    .why-choose-us-bg {
+      background-image: var(--why-choose-us-bg);
+      background-repeat: no-repeat;
+      background-position: top right;
+      background-size: cover;
+      background-color: transparent;
+    }
+  }
   
 }
 
@@ -195,10 +209,64 @@ All colors MUST be HSL.
   animation: infinite-scroll 60s linear infinite;
 }
 
+/* Header mobile drawer: slide in from left */
+@keyframes drawer-slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.drawer-slide-in {
+  animation: drawer-slide-in 0.3s ease-out forwards;
+}
+
+@keyframes drawer-slide-out {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.drawer-slide-out {
+  animation: drawer-slide-out 0.25s ease-in forwards;
+}
+
+/* Hide scrollbar for horizontal scroll (e.g. testimonials mobile) */
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 .numbers-description {
   @apply text-white text-lg font-normal max-w-[400px] mx-auto leading-tight mb-0;
 }
 
-.numbers-description strong {
+/*.numbers-description strong {
   @apply text-5xl font-extrabold tracking-tight text-neongreen inline-block w-full mt-1;
+}*/
+.numbers-description strong {
+  @apply font-extrabold tracking-tight text-neongreen text-xl;
+}
+
+
+.testimonials-masonry{
+  position: relative;  
+}
+.testimonials-masonry:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  height: 30%;
+  width: 100%;  
+  background: linear-gradient(0deg,rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 0) 100%);
 }

@@ -26,12 +26,12 @@ const WhyChooseUs = () => {
               <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logo2.png`} alt="Pura Web" className="mt-[-3px]"/>
             </h2>            
             
-            <p className="text-[1.95rem] leading-tight text-   leading-relaxed mb-6 font-oswald">              
-              Somos especialistas em criar sites ultra rápidos, com design premium e que funcionam como verdadeiras máquinas de vendas.
+            <p className="text-[1.15rem] text-deepgray font-normal mb-4 portrait:text-md">             
+              Somos especialistas em criar sites <strong>ultra rápidos</strong>, com <strong>design premium</strong> e que funcionam como verdadeiras <strong>máquinas de vendas</strong>.
             </p>
 
             <p className="text-[1.15rem] text-deepgray font-normal mb-4 portrait:text-md">    
-              <strong className="text-deepgray">Sites feitos para converter:</strong> utilizamos modelos pré-construídos e validados para todos os tipos de negócio. 
+              <strong className="text-deepgray">Sites feitos para converter:</strong> utilizamos modelos pré-construídos, testados e validados para todos os tipos de negócio. 
             </p>          
             <p className="text-[1.15rem] text-deepgray font-normal mb-4 portrait:text-md">            
               Nosso processo de criação simplificado reúne agilidade e eficiência para entregar resultados reais. Aqui você pode ter a certeza de que seu site será entregue no prazo e com a qualidade que você precisa.

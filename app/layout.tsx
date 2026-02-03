@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from 'next/script'
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
@@ -6,12 +7,13 @@ import { Providers } from "./providers";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "PuraWeb",
-  description: "A melhor de Curitiba em conserto de notebooks, com atendimento personalizado e garantia total. 16 anos de experiência em assistência técnica especializada.",
-  keywords: "assistência técnica notebooks, conserto notebook Curitiba, reparo notebook, manutenção notebook, assistência técnica Curitiba",
-  authors: [{ name: "Notebook Expert" }],
-  creator: "Notebook Expert",
-  publisher: "Notebook Expert",
+  metadataBase: new URL('https://puraweb.com.br'),
+  title: "Sites Profissionais e Landing Pages | Pura Web Agência Digital",
+  description: "Tenha um site ultra rápido para sua empresa por apenas R$ 490. Landing pages e sites institucionais otimizados para vendas. Pagamento facilitado em 12x!",
+  keywords: "criação de sites, curitiba, landing page para empresas, agência web curitiba, desenvolvimento web profissional",
+  authors: [{ name: "Pura Web" }],
+  creator: "Pura Web",
+  publisher: "Pura Web",
 
   icons: {
     icon: '/favicon.png',
@@ -23,16 +25,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "pt_BR",
-    url: "https://notebookexpert.com.br/",
-    title: "Notebook Expert | Assistência Técnica para Notebooks em Curitiba",
-    description: "A melhor de Curitiba em conserto de notebooks, com atendimento personalizado e garantia total. 16 anos de experiência.",
-    siteName: "Notebook Expert",
+    url: "https://puraweb.com.br/",
+    title: "Sites Profissionais e Landing Pages | Pura Web Agência Digital",
+    description: "Tenha um site ultra rápido para sua empresa por apenas R$ 490. Landing pages e sites institucionais otimizados para vendas. Pagamento facilitado em 12x!",
+    siteName: "Pura Web",
     images: [
       {
-        url: "/hero-tech.jpg",
+        url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "Notebook Expert - Assistência Técnica de Notebooks",
+        alt: "Pura Web - Sites Profissionais e Landing Pages",
       },
     ],
   },
@@ -40,9 +42,9 @@ export const metadata: Metadata = {
   // Twitter Card
   twitter: {
     card: "summary_large_image",
-    title: "Notebook Expert | Assistência Técnica para Notebooks em Curitiba",
-    description: "A melhor de Curitiba em conserto de notebooks, com atendimento personalizado e garantia total.",
-    images: ["/hero-tech.jpg"],
+    title: "Sites Profissionais e Landing Pages | Pura Web Agência Digital",
+    description: "Tenha um site ultra rápido para sua empresa por apenas R$ 490. Landing pages e sites institucionais otimizados para vendas. Pagamento facilitado em 12x!",
+    images: ["/og.png"],
   },
 
   // Robots
@@ -57,14 +59,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-
-  // Verification
-  verification: {
-    google: "seu-codigo-de-verificacao-google",
-  },
-
-  // Outros metadados
-  category: "technology",
 };
 
 export default function RootLayout({
@@ -124,6 +118,19 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-VNF85SXR88"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', G-VNF85SXR88');
+          `}
+        </Script>
         <Providers>
           {children}
         </Providers>

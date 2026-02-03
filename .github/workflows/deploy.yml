@@ -1,0 +1,40 @@
+name: Deploy to Hostgator (Static Site)
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Build do projeto (static export)
+        run: npm run build
+        env:
+          NEXT_PUBLIC_BASE_PATH: ${{ secrets.NEXT_PUBLIC_BASE_PATH || '' }}
+
+      - name: Deploy via SCP para Hostgator (com senha)
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.HOSTGATOR_SSH_HOST }}
+          username: ${{ secrets.HOSTGATOR_SSH_USERNAME }}
+          password: ${{ secrets.HOSTGATOR_SSH_PASSWORD }}
+          port: ${{ secrets.HOSTGATOR_SSH_PORT || 22 }}
+          source: "out/*"
+          target: ${{ secrets.HOSTGATOR_DEPLOY_PATH }}
+          strip_components: 1
+          rm: true

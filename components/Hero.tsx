@@ -52,7 +52,7 @@ const Services = () => {
   const animProps = (index: number, delayOrder: number) => ({
     initial: { opacity: 0, y: 30 },
     animate: selectedIndex === index ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 },
-    transition: { duration: 0.8, ease: "easeOut", delay: delayOrder * 0.2 }
+    transition: { duration: 0.8, ease: [0.4, 0, 0.2, 1] as const, delay: delayOrder * 0.2 }
   });
 
   return (

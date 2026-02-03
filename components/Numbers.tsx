@@ -29,7 +29,7 @@ const Numbers = () => {
        <div className="max-w-[1600px] mx-auto flex items-center justify-center p-10 pt-32 pb-24 gap-10 portrait:flex-col portrait:p-4">
        {numbers.map((number, index) => (
         <div key={index} className="flex-1 px-12 pt-4 pb-8 relative flex flex-col items-center justify-start text-center border border-neongreen border-2 rounded-sm portrait:w-full portrait:mb-12" style={{ boxShadow: '0px 3px 10px rgb(23 207 198 / 50%)' }}>
-          <h3 className="text-[60px] font-bold font-oswald uppercase leading-tight text-neongreen tracking-tight mt-[-60px] mb-4 bg-[#181b23]" style={{ textShadow: '5px 5px 5px rgba(0, 0, 0, 0.15)' }}>{number.title}</h3>          
+          <h3 className="text-[60px] font-bold font-oswald uppercase leading-tight text-neongreen tracking-tight mt-[-60px] portrait:mt-[-45px] mb-4 bg-[#181b23] portrait:text-[42px]" style={{ textShadow: '5px 5px 5px rgba(0, 0, 0, 0.15)' }}>{number.title}</h3>          
           <p dangerouslySetInnerHTML={{ __html: number.description }} className="numbers-description"></p>
         </div>
        ))}

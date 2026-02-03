@@ -57,14 +57,14 @@ const FAQ = () => {
             transition={{ duration: 0.6 }}
             className="lg:top-32"
           >
-            <h3 className="mx-auto leading-tight font-pacifico text-neongreen text-[2.5rem] mb-[-20px]">
+            <h3 className="mx-auto leading-tight font-pacifico text-neongreen text-[2.5rem] mb-[-20px] portrait:text-center">
                 Perguntas
             </h3>
-            <h2 className="mb-6 mx-auto font-oswald text-[64px] md:text-[96px] leading-tight" style={{ textShadow: '5px 5px 5px rgba(0, 0, 0, 0.15)', letterSpacing: '-3px' }}>
+            <h2 className="mb-6 mx-auto font-oswald text-[64px] md:text-[96px] leading-tight portrait:text-center" style={{ textShadow: '5px 5px 5px rgba(0, 0, 0, 0.15)', letterSpacing: '-3px' }}>
                 Frequentes
             </h2>
-            <div className="h-1 w-24 bg-neongreen mb-6 rounded" />
-            <p className="text-muted-foreground text-lg leading-relaxed">
+            <div className="h-1 w-24 bg-neongreen mb-6 rounded portrait:mx-auto" />
+            <p className="text-muted-foreground text-lg leading-relaxed portrait:text-center">
               Reunimos as principais dúvidas dos nossos clientes sobre criação de sites. 
               Se você não encontrar a resposta que procura, entre em contato conosco pelo WhatsApp, será um prazer lhe atender.
             </p>
@@ -75,7 +75,7 @@ const FAQ = () => {
                 href="https://wa.me/5541999631609" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="btn-wpp inline-flex bg-neongreen border-neongreen portrait:w-full"
+                className="btn-wpp inline-flex bg-neongreen border-neongreen portrait:w-full shadow-xl"
               >
                 <i className="fab fa-whatsapp text-2xl"></i>
                 <span>Quero fazer um teste GRÁTIS!</span>

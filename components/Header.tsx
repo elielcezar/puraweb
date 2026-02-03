@@ -54,7 +54,7 @@ const Header = () => {
 
 
   return (
-    <header className="fixed top-3 left-0 right-0 z-[100] bg-[#141a26]/80 backdrop-blur-sm landscape:w-[90%] max-w-[1400px] rounded-full mx-auto pl-2 pr-0 pt-0">
+    <header className="fixed top-3 left-0 right-0 z-[100] bg-[#141a26]/80 backdrop-blur-sm landscape:w-[90%] portrait:w-[97%] max-w-[1400px] rounded-full mx-auto pl-2 pr-0 pt-0">
       <nav className=" mx-auto px-4 py-3">
         <div className="flex items-center justify-between portrait:flex-col portrait:items-center portrait:gap-4">
           {/* Logo */}          
@@ -84,7 +84,7 @@ const Header = () => {
               </Link>                                      
             </nav>          
             <div className="landscape:w-[20%] text-right">
-              <Link href="#" onClick={() => scrollToSection('#contato', 50)} className="text-white text-md font-bold transition-colors bg-neongreen hover:bg-deepgray text-white px-4 py-2 rounded-full border-2 border-neongreen hover:border-white portrait:py-1 portrait:px-3 portrait:mr-12">      
+              <Link href="#" onClick={() => scrollToSection('#contato', 50)} className="text-white text-md font-bold transition-colors bg-neongreen hover:bg-deepgray text-white px-4 py-2 rounded-full border-2 border-neongreen hover:border-white portrait:py-1 portrait:px-3 portrait:mr-9">      
                 Teste, é grátis!
               </Link>
             </div>
@@ -118,43 +118,51 @@ const Header = () => {
                 onClick={handleCloseDrawer}
               />
               <aside
-                className={`fixed left-0 top-0 bottom-0 w-[85vw] min-w-[280px] bg-background shadow-xl z-[210] flex flex-col pt-20 px-6 pb-6 overflow-y-auto ${isClosing ? "drawer-slide-out" : "drawer-slide-in"}`}
+                className={`fixed left-0 top-0 bottom-0 w-[85vw] min-w-[280px] bg-background shadow-xl z-[210] flex flex-col overflow-y-auto ${isClosing ? "drawer-slide-out" : "drawer-slide-in"}`}
                 role="dialog"
                 aria-label="Menu de navegação"
               >
+                <div className="bg-deepgray flex items-center justify-center h-[140px] mb-6">
+                  <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logo-pura.webp`} alt="Logo" width="121" height="57" className="w-[121px] h-[57px] mt-[-10px]" />
+                </div>
                 <nav className="flex flex-col gap-1">
                   <Link
-                    href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/`}
-                    className="text-foreground hover:text-neongreen font-semibold py-3 px-4 rounded-md hover:bg-muted transition-colors uppercase text-sm"
-                    onClick={handleCloseDrawer}
+                    href="#" onClick={() => {scrollToSection('#sobre', 50); handleCloseDrawer()}} 
+                    className="text-foreground font-semibold py-3 px-6 rounded-md hover:bg-muted transition-colors uppercase text-sm"
                   >
                     Quem Somos
                   </Link>
-                  <Link
+                  {/*<Link
                     href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/sobre`}
-                    className="text-foreground hover:text-neongreen font-semibold py-3 px-4 rounded-md hover:bg-muted transition-colors uppercase text-sm"
+                    className="text-foreground hover:text-neongreen font-semibold py-3 px-6 rounded-md hover:bg-muted transition-colors uppercase text-sm"
                     onClick={handleCloseDrawer}
                   >
                     Nossos Sites
-                  </Link>
+                  </Link>*/}
                   <Link
-                    href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/franquia`}
-                    className="text-foreground hover:text-neongreen font-semibold py-3 px-4 rounded-md hover:bg-muted transition-colors uppercase text-sm"
-                    onClick={handleCloseDrawer}
+                    href="#" onClick={() => {scrollToSection('#faq', 50); handleCloseDrawer()}} 
+                    className="text-foreground hover:text-neongreen font-semibold py-3 px-6 rounded-md hover:bg-muted transition-colors uppercase text-sm"
                   >
                     Como Funciona
                   </Link>
-                </nav>
-                <div className="mt-6">
                   <Link
-                    href="https://wa.me/5541999631609"
-                    target="_blank"
+                    href="#" onClick={() => {scrollToSection('#contato', 50); handleCloseDrawer()}} 
+                    className="text-foreground hover:text-neongreen font-semibold py-3 px-6 rounded-md hover:bg-muted transition-colors uppercase text-sm"
+                  >
+                    Contato
+                  </Link>
+                </nav>
+                <div className="mt-6 px-4">                 
+                  <a 
+                    href="https://wa.me/5541999631609" 
+                    target="_blank" 
                     rel="noopener noreferrer"
-                    className="btn-wpp inline-flex text-center w-full justify-center"
+                    className="btn-wpp inline-flex bg-neongreen border-neongreen portrait:w-full shadow-xl px-2"
                     onClick={handleCloseDrawer}
                   >
-                    Teste, é grátis!
-                  </Link>
+                    <i className="fab fa-whatsapp text-2xl"></i>
+                    <span>Solicite um teste, é grátis!</span>
+                  </a>
                 </div>
               </aside>
             </div>,

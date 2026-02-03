@@ -1,32 +1,10 @@
 'use client';
 
 import { useState, useEffect, useRef, useCallback } from "react";
-import { 
-  Menu, 
-  X, 
-  Cpu, 
-  Monitor, 
-  Keyboard, 
-  Battery, 
-  Wrench, 
-  HardDrive, 
-  Thermometer, 
-  Droplet, 
-  Settings, 
-  Database 
-} from "lucide-react";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
+import { Menu, X} from "lucide-react";
 import Link from "next/link";
 import { createPortal } from "react-dom";
-
-
+import { scrollToSection} from "@/utils/helpers";
 
 const DRAWER_ANIMATION_MS = 250;
 
@@ -92,21 +70,21 @@ const Header = () => {
             </div>
            
             <nav className="flex items-center justify-center gap-12 portrait:hidden landscape:w-[60%]">
-              <Link href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/`} className="text-white text-sm font-semibold hover:text-neongreen transition-colors uppercase">      
+              <Link href="#" onClick={() => scrollToSection('#sobre', 50)} className="text-white text-sm font-semibold hover:text-neongreen transition-colors uppercase cursor-pointer">      
                 Quem Somos
               </Link>
-              <Link href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/modelos`} className="text-white text-sm font-semibold hover:text-neongreen transition-colors uppercase">      
+              {/*<Link href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/modelos`} className="text-white text-sm font-semibold hover:text-neongreen transition-colors uppercase">      
                 Nossos Sites
-              </Link>             
-              <Link href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/faq`} className="text-white text-sm font-semibold hover:text-neongreen transition-colors uppercase">      
+              </Link> */ }           
+              <Link href="#" onClick={() => scrollToSection('#faq', 50)} className="text-white text-sm font-semibold hover:text-neongreen transition-colors uppercase cursor-pointer">      
                 Como Funciona
               </Link>                                      
-              <Link href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/contato`} className="text-white text-sm font-semibold hover:text-neongreen transition-colors uppercase">      
+              <Link href="#" onClick={() => scrollToSection('#contato', 50)} className="text-white text-sm font-semibold hover:text-neongreen transition-colors uppercase cursor-pointer">      
                 Contato
               </Link>                                      
             </nav>          
             <div className="landscape:w-[20%] text-right">
-              <Link href="https://wa.me/5541999631609" target="_blank" rel="noopener noreferrer" className="text-white text-md font-bold transition-colors bg-neongreen hover:bg-deepgray text-white px-4 py-2 rounded-full border-2 border-neongreen hover:border-white portrait:py-1 portrait:px-3 portrait:mr-12">      
+              <Link href="#" onClick={() => scrollToSection('#contato', 50)} className="text-white text-md font-bold transition-colors bg-neongreen hover:bg-deepgray text-white px-4 py-2 rounded-full border-2 border-neongreen hover:border-white portrait:py-1 portrait:px-3 portrait:mr-12">      
                 Teste, é grátis!
               </Link>
             </div>

@@ -145,10 +145,10 @@ const Services = () => {
 
       {/* CTA WhatsApp */}
       <div className="flex justify-center gap-8 w-full max-w-[700px] mx-auto portrait:flex-col portrait:px-4 portrait:py-12">
-        <a href="#" target="_blank" rel="noopener noreferrer" className="py-4 px-4 btn-wpp bg-transparent border-2 border-neongreen hover:text-white hover:bg-neongreen hover:border-neongreen hover:shadow-[0px_5px_25px_rgb(23_207_198_/_50%)] transition-all duration-300 portrait:w-full portrait:bg-neongreen">
+        {/*<a href="#" target="_blank" rel="noopener noreferrer" className="py-4 px-4 btn-wpp bg-transparent border-2 border-neongreen hover:text-white hover:bg-neongreen hover:border-neongreen hover:shadow-[0px_5px_25px_rgb(23_207_198_/_50%)] transition-all duration-300 portrait:w-full portrait:bg-neongreen">
           <i className="fa-regular fa-pen-to-square text-2xl"></i>
           <span>Veja todos os modelos</span>
-        </a>
+        </a>*/}
 
         <a href="https://wa.me/5541999631609" target="_blank" rel="noopener noreferrer" className="py-4 px-4 btn-wpp bg-transparent border-2 border-neongreen hover:text-white hover:bg-neongreen hover:border-neongreen hover:shadow-[0px_5px_25px_rgb(23_207_198_/_50%)] transition-all duration-300 portrait:w-full portrait:bg-neongreen">
           <i className="fab fa-whatsapp text-2xl"></i>

@@ -1,11 +1,11 @@
-// Função para abrir WhatsApp
+
 export function openWhatsApp(message: string = 'Olá! Gostaria de solicitar um orçamento para assistência técnica.') {
     if (typeof window !== 'undefined') {
         window.open(`https://wa.me/5541998870606?text=${encodeURIComponent(message)}`, '_blank');
     }
 }
 
-// Função para scroll suave (apenas no cliente)
+
 export function scrollToSection(sectionId: string, offset: number) {
     if (typeof window !== 'undefined') {
 

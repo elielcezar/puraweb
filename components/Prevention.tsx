@@ -29,10 +29,10 @@ const Prevention = () => {
 
            {/* CTA WhatsApp */}
             <div className="flex justify-center gap-8 w-full max-w-[700px] mx-auto portrait:flex-col portrait:px-4">
-              <a  href="#" target="_blank" rel="noopener noreferrer" className="bg-transparent text-deepgray border-2 border-deepgray py-4 px-4 btn-wpp hover:bg-deepgray hover:text-white hover:border-deepgray transition-all duration-300 [box-shadow:0px_5px_5px_rgb(0_0_0_/_15%)]">
+              {/*<a  href="#" target="_blank" rel="noopener noreferrer" className="bg-transparent text-deepgray border-2 border-deepgray py-4 px-4 btn-wpp hover:bg-deepgray hover:text-white hover:border-deepgray transition-all duration-300 [box-shadow:0px_5px_5px_rgb(0_0_0_/_15%)]">
                 <i className="fa-regular fa-pen-to-square text-2xl"></i>
                 <span>Ver todos os modelos</span>
-              </a>
+              </a>*/}
 
               <a  href="https://wa.me/5541999631609" target="_blank" rel="noopener noreferrer" className="bg-transparent text-neongreen border-2 border-neongreen py-4 px-4 btn-wpp hover:bg-neongreen hover:text-white hover:border-neongreen shadow-sm transition-all duration-300 [box-shadow:0px_5px_5px_rgb(0_0_0_/_15%)]">
                 <i className="fab fa-whatsapp text-2xl"></i>

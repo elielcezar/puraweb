@@ -2,7 +2,7 @@ import { Phone, Mail } from "lucide-react";
 
 const Footer = () => {
     return (
-        <footer className=" text-white pt-32 pb-44 bg-[#202632] portrait:px-4" style={{ background: `url(${process.env.NEXT_PUBLIC_BASE_PATH || ''}/bg-geral3.jpg) no-repeat bottom left; background-size: cover; background-attachment: fixed` }}>
+        <footer id="contato" className=" text-white pt-32 pb-44 bg-[#202632] portrait:px-4" style={{ background: `url(${process.env.NEXT_PUBLIC_BASE_PATH || ''}/bg-geral3.jpg) no-repeat bottom left; background-size: cover; background-attachment: fixed` }}>
 
             <div className="max-w-7xl mx-auto sm:px-6 lg:px-8 text-center flex flex-col items-center gap-4">
 

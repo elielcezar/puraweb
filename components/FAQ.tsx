@@ -15,6 +15,10 @@ const FAQ = () => {
       answer: "O prazo varia dependendo da complexidade de cada projeto. Sites institucionais simples geralmente ficam prontos entre 3 a 5 dias, enquanto projetos mais elaborados podem levar até 1 mês."
     },
     {
+      question: "E quanto custa?",
+      answer: "A partir de <strong>R$490,00</strong> para projetos rápidos, e você pode parcelar em até 12x sem juros. Mas também desenvolvemos projetos altamente customizados, com as funcionalidades que você precisar e valor a combinar."
+    },
+    {
       question: "O site será responsivo (mobile)?",
       answer: "Sim! Todos os nossos sites são 100% responsivos, ou seja, se adaptam perfeitamente a qualquer dispositivo: celulares, tablets, notebooks e desktops. Isso é essencial para uma boa experiência do usuário e para o SEO."
     },
@@ -93,13 +97,13 @@ const FAQ = () => {
                   value={`item-${index}`}
                   className="bg-white rounded-sm border border-border overflow-hidden shadow-md"
                 >
-                  <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-deepgray hover:text-white transition-all duration-300 data-[state=open]:bg-neongreen data-[state=open]:text-white data-[state=open]:hover:bg-neongreen">
+                  <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-deepgray hover:text-white transition-all duration-300 data-[state=open]:bg-deepgray data-[state=open]:text-white data-[state=open]:hover:bg-deepgray">
                     <span className="text-lg font-semibold pr-4">
                       {faq.question}
                     </span>
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-6 text-deepgray">
-                    {faq.answer}
+                    <div dangerouslySetInnerHTML={{ __html: faq.answer }} />
                   </AccordionContent>
                 </AccordionItem>
               ))}

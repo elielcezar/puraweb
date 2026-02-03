@@ -27,14 +27,22 @@ jobs:
         env:
           NEXT_PUBLIC_BASE_PATH: ${{ secrets.NEXT_PUBLIC_BASE_PATH || '' }}
 
-      - name: Deploy via SCP para Hostgator (com senha)
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.HOSTGATOR_SSH_HOST }}
-          username: ${{ secrets.HOSTGATOR_SSH_USERNAME }}
-          password: ${{ secrets.HOSTGATOR_SSH_PASSWORD }}
-          port: ${{ secrets.HOSTGATOR_SSH_PORT || 22 }}
-          source: "out/*"
-          target: ${{ secrets.HOSTGATOR_DEPLOY_PATH }}
-          strip_components: 1
-          rm: true
+      - name: Instalar dependências para deploy
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y sshpass rsync
+
+      - name: Configurar SSH para Hostgator
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H ${{ secrets.HOSTGATOR_SSH_HOST }} >> ~/.ssh/known_hosts || true
+          echo "Host ${{ secrets.HOSTGATOR_SSH_HOST }}" >> ~/.ssh/config
+          echo "  KexAlgorithms +diffie-hellman-group-exchange-sha256" >> ~/.ssh/config
+          echo "  HostKeyAlgorithms +ssh-rsa" >> ~/.ssh/config
+          chmod 600 ~/.ssh/config
+
+      - name: Deploy via rsync para Hostgator
+        run: |
+          sshpass -p '${{ secrets.HOSTGATOR_SSH_PASSWORD }}' rsync -avz --delete \
+            -e "ssh -p ${{ secrets.HOSTGATOR_SSH_PORT || 22 }} -o StrictHostKeyChecking=no -o KexAlgorithms=+diffie-hellman-group-exchange-sha256" \
+            out/ ${{ secrets.HOSTGATOR_SSH_USERNAME }}@${{ secrets.HOSTGATOR_SSH_HOST }}:${{ secrets.HOSTGATOR_DEPLOY_PATH }}/

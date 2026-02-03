@@ -5,6 +5,7 @@ import useEmblaCarousel from 'embla-carousel-react';
 import { useCallback, useState, useEffect } from 'react';
 import AutoPlay from 'embla-carousel-autoplay';
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const Services = () => {
   // Configuração do Embla Carousel
@@ -81,24 +82,36 @@ const Services = () => {
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex">
 
-            <div key="01" className="flex-[0_0_100%] flex items-center justify-center bg-[#3d204e] min-h-[800px]">
-              <div className="flex items-center justify-center flex-col p-6 transition-all duration-300 h-full w-full" style={{ background: `url(${process.env.NEXT_PUBLIC_BASE_PATH || ''}/burst.jpg) no-repeat center center; background-size: cover` }}>
+            <div key="01" className="flex-[0_0_100%] flex items-center justify-center bg-[#3d204e] min-h-[800px] portrait:min-h-[100vh] relative overflow-hidden">
+              {/* Imagem de background otimizada com priority para LCP */}
+              <Image
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/burst.webp`}
+                alt="Sua marca com muito mais impacto"
+                fill
+                priority
+                fetchPriority="high"
+                quality={85}
+                className="object-cover"
+                sizes="100vw"
+                unoptimized
+              />
+              <div className="flex items-center justify-center flex-col p-6 transition-all duration-300 h-full w-full relative z-10">
                 <motion.h3 
                   {...animProps(0, 1)}
-                  className="text-[56px] text-white font-pacifico mb-[-30px] portrait:text-[32px]"
+                  className="text-[56px] text-white font-pacifico mb-[-10px] portrait:text-[7vw]"
                 >
                   Sua marca com muito mais
                 </motion.h3>
                 <motion.p 
                   {...animProps(0, 2)}
-                  className="text-[140px] text-white font-oswald mt-0 font-bold tracking-tight leading-tight portrait:text-[75px]" 
+                  className="text-[140px] text-white font-oswald mt-0 font-bold tracking-tight leading-tight portrait:text-[18vw]" 
                   style={{ textShadow: '5px 5px 5px rgba(0, 0, 0, 0.15)', letterSpacing: '-3px' }}
                 >
                   IMPACTO
                 </motion.p>
                 <motion.p 
                   {...animProps(0, 3)}
-                  className="text-white text-3xl font-normal portrait:text-xl"
+                  className="text-white text-3xl font-normal portrait:text-xl text-center"
                 >
                   Atraia clientes qualificados com um site feito para converter
                 </motion.p>
@@ -106,25 +119,36 @@ const Services = () => {
             </div>
 
 
-            <div key="02" className="flex-[0_0_100%] flex items-center justify-center bg-[#3d204e] min-h-[800px]">
-              <div className="flex items-center justify-center flex-col p-6 transition-all duration-300 h-full w-full" style={{ background: `url(${process.env.NEXT_PUBLIC_BASE_PATH || ''}/fullscreen-slide-1.jpg) no-repeat center center; background-size: cover` }}>
+            <div key="02" className="flex-[0_0_100%] flex items-center justify-center bg-[#3d204e] min-h-[800px] portrait:min-h-[100vh] relative overflow-hidden">
+              {/* Imagem de background com lazy loading */}
+              <Image
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/fullscreen-slide-1.webp`}
+                alt="Mais cliques, mais vendas"
+                fill
+                loading="lazy"
+                quality={85}
+                className="object-cover"
+                sizes="100vw"
+                unoptimized
+              />
+              <div className="flex items-center justify-center flex-col p-6 transition-all duration-300 h-full w-full relative z-10">
 
                 <motion.h3 
                   {...animProps(1, 1)}
-                  className="text-[56px] text-neongreen font-pacifico mb-[-30px] portrait:text-[32px]"
+                  className="text-[56px] text-neongreen font-pacifico mb-[-10px] portrait:text-[7vw]"
                 >
                   Mais cliques, mais
                 </motion.h3>
                 <motion.p 
                   {...animProps(1, 2)}
-                  className="text-[140px] text-white font-oswald mt-0 font-bold tracking-tight leading-tight portrait:text-[75px]" 
+                  className="text-[140px] text-white font-oswald mt-0 font-bold tracking-tight leading-tight portrait:text-[18vw]" 
                   style={{ textShadow: '5px 5px 5px rgba(0, 0, 0, 0.15)', letterSpacing: '-3px' }}
                 >
                   VENDAS
                 </motion.p>
                 <motion.p 
                   {...animProps(1, 3)}
-                  className="text-white text-3xl font-normal portrait:text-xl"
+                  className="text-white text-3xl font-normal portrait:text-xl text-center"
                 >
                   Sua presença na internet com o melhor custo-benefício
                 </motion.p>
@@ -147,43 +171,43 @@ const Services = () => {
               </div>
             </div>
 
-            <div key="03" className="flex-[0_0_100%] flex items-center justify-center bg-[#3d204e] min-h-[800px]">
-              <div className="flex items-center justify-center flex-col p-6 transition-all duration-300 h-full w-full" style={{ background: `url(${process.env.NEXT_PUBLIC_BASE_PATH || ''}/background1.jpg) no-repeat center center; background-size: cover` }}>
+            <div key="03" className="flex-[0_0_100%] flex items-center justify-center bg-[#3d204e] min-h-[800px] portrait:min-h-[100vh] relative overflow-hidden">
+              {/* Imagem de background com lazy loading */}
+              <Image
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/background1.webp`}
+                alt="Nosso foco é o desempenho"
+                fill
+                loading="lazy"
+                quality={85}
+                className="object-cover"
+                sizes="100vw"
+                unoptimized
+              />
+              <div className="flex items-center justify-center flex-col p-6 transition-all duration-300 h-full w-full relative z-10">
                 <motion.h3 
                   {...animProps(2, 1)}
-                  className="text-[56px] text-white font-pacifico mb-[-30px] portrait:text-[32px]"
+                  className="text-[56px] text-white font-pacifico mb-[-10px] portrait:text-[7vw]"
                 >
                   Nosso foco é o
                 </motion.h3>
                 <motion.p 
                   {...animProps(2, 2)}
-                  className="text-[140px] text-white font-oswald mt-0 font-bold tracking-tight leading-tight portrait:text-[75px]" 
+                  className="text-[140px] text-white font-oswald mt-0 font-bold tracking-tight leading-tight portrait:text-[18vw]" 
                   style={{ textShadow: '5px 5px 5px rgba(0, 0, 0, 0.15)', letterSpacing: '-3px' }}
                 >
                   DESEMPENHO
                 </motion.p>
                 <motion.p 
                   {...animProps(2, 3)}
-                  className="text-white text-3xl font-normal portrait:text-xl"
+                  className="text-white text-3xl font-normal portrait:text-xl text-center"
                 >
                   Para você atrair mais clientes
                 </motion.p>
               </div>
             </div>
-
-
-
-
           </div>
         </div>
-
-
-
       </div>
-
-
-
-
     </section>
   );
 };

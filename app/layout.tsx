@@ -69,6 +69,13 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
+        {/* Preload da imagem crítica do Hero (LCP) */}
+        <link
+          rel="preload"
+          href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/burst.webp`}
+          as="image"
+          fetchPriority="high"
+        />
         {/* Font Awesome */}
         <link
           rel="stylesheet"

@@ -33,7 +33,7 @@ const Footer = () => {
             </div>
 
             <div className="btn-circle">
-                <a href="https://wa.me/5541999631609" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/554188815706" target="_blank" rel="noopener noreferrer">
                     <i className="fab fa-whatsapp text-4xl"></i>
                 </a>
             </div>

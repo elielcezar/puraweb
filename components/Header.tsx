@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef, useCallback } from "react";
-import { Menu, X} from "lucide-react";
+import { Menu, SquareUserRound, HelpCircle, X, SquarePen, Send} from "lucide-react";
 import Link from "next/link";
 import { createPortal } from "react-dom";
 import { scrollToSection} from "@/utils/helpers";
@@ -65,7 +65,7 @@ const Header = () => {
                 alt="Logo" 
                 width="121" 
                 height="57" 
-                className="mt-[-16px] portrait:w-[100px] portrait:h-[50px]"              
+                className="mt-[-16px] portrait:w-[100px] portrait:h-[47px]"              
               />
             </div>
            
@@ -77,15 +77,15 @@ const Header = () => {
                 Nossos Sites
               </Link> */ }           
               <Link href="#" onClick={() => scrollToSection('#faq', 50)} className="text-white text-sm font-semibold hover:text-neongreen transition-colors uppercase cursor-pointer">      
-                Como Funciona
+                Como Funciona?
               </Link>                                      
               <Link href="#" onClick={() => scrollToSection('#contato', 50)} className="text-white text-sm font-semibold hover:text-neongreen transition-colors uppercase cursor-pointer">      
                 Contato
               </Link>                                      
             </nav>          
-            <div className="landscape:w-[20%] text-right">
-              <Link href="#" onClick={() => scrollToSection('#contato', 50)} className="text-white text-md font-bold transition-colors bg-neongreen hover:bg-deepgray text-white px-4 py-2 rounded-full border-2 border-neongreen hover:border-white portrait:py-1 portrait:px-3 portrait:mr-9">      
-                Teste, é grátis!
+            <div className="landscape:w-[20%] flex justify-end">
+              <Link href="https://wa.me/554188815706" target="_blank" rel="noopener noreferrer" className="w-[210px] flex items-center gap-2 text-white text-md font-bold transition-colors bg-neongreen hover:bg-deepgray px-4 py-2 rounded-full border-2 border-neongreen hover:border-white portrait:py-1 portrait:px-3 portrait:mr-9 portrait:w-[183px] portrait:text-[14px]">      
+                Orçamento Rápido <Send className="w-5 h-5" />
               </Link>
             </div>
           </div>
@@ -122,14 +122,15 @@ const Header = () => {
                 role="dialog"
                 aria-label="Menu de navegação"
               >
-                <div className="bg-deepgray flex items-center justify-center h-[140px] mb-6">
+                <div className="bg-deepgray flex items-center justify-center h-[140px] mb-2 border-b-[15px] border-neongreen">
                   <img src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logo-pura.webp`} alt="Logo" width="121" height="57" className="w-[121px] h-[57px] mt-[-10px]" />
                 </div>
                 <nav className="flex flex-col gap-1">
                   <Link
                     href="#" onClick={() => {scrollToSection('#sobre', 50); handleCloseDrawer()}} 
-                    className="text-foreground font-semibold py-3 px-6 rounded-md hover:bg-muted transition-colors uppercase text-sm"
+                    className="text-foreground font-semibold py-6 px-6 hover:bg-muted transition-colors uppercase text-sm border-b border-deepgray/20 flex items-center gap-2"
                   >
+                    <SquareUserRound className="w-5 h-5" />
                     Quem Somos
                   </Link>
                   {/*<Link
@@ -141,29 +142,30 @@ const Header = () => {
                   </Link>*/}
                   <Link
                     href="#" onClick={() => {scrollToSection('#faq', 50); handleCloseDrawer()}} 
-                    className="text-foreground hover:text-neongreen font-semibold py-3 px-6 rounded-md hover:bg-muted transition-colors uppercase text-sm"
+                    className="text-foreground font-semibold py-6 px-6 hover:bg-muted transition-colors uppercase text-sm border-b border-deepgray/20 flex items-center gap-2"
                   >
-                    Como Funciona
+                    <SquarePen className="w-5 h-5" />
+                    Como Funciona?
                   </Link>
                   <Link
-                    href="#" onClick={() => {scrollToSection('#contato', 50); handleCloseDrawer()}} 
-                    className="text-foreground hover:text-neongreen font-semibold py-3 px-6 rounded-md hover:bg-muted transition-colors uppercase text-sm"
+                    href="#" onClick={() => {scrollToSection('#contato', 5); handleCloseDrawer()}} 
+                    className="text-foreground font-semibold py-6 px-6 hover:bg-muted transition-colors uppercase text-sm border-b border-deepgray/20 flex items-center gap-2"
                   >
+                    <Send className="w-5 h-5" />
                     Contato
                   </Link>
-                </nav>
-                <div className="mt-6 px-4">                 
-                  <a 
-                    href="https://wa.me/5541999631609" 
+
+                  <Link 
+                    href="https://wa.me/554188815706" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="btn-wpp inline-flex bg-neongreen border-neongreen portrait:w-full shadow-xl px-2"
+                    className="text-foreground font-semibold py-6 px-6 hover:bg-muted transition-colors uppercase text-sm border-b border-deepgray/20 flex items-center gap-2"
                     onClick={handleCloseDrawer}
                   >
                     <i className="fab fa-whatsapp text-2xl"></i>
                     <span>Solicite um teste, é grátis!</span>
-                  </a>
-                </div>
+                  </Link>
+                </nav>               
               </aside>
             </div>,
             document.body

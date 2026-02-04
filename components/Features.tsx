@@ -44,7 +44,7 @@ const Features = () => {
   ];
 
   return (
-    <section className="pt-32 pb-10 bg-slate-50">
+    <section className="pt-32 pb-10 bg-slate-50 portrait:pt-20 portrait:pb-5">
       <div className="container mx-auto px-4">   
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {benefits.map((benefit, index) => (

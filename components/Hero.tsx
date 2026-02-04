@@ -162,7 +162,7 @@ const Services = () => {
                     <span>Ver todos os modelos</span>
                   </a>*/}
 
-                  <a href="https://wa.me/5541999631609" target="_blank" rel="noopener noreferrer" className="bg-transparent text-white border-2 border-white py-4 px-8 btn-wpp hover:bg-neongreen hover:text-white hover:border-neongreen shadow-sm transition-all duration-300 [box-shadow:0px_5px_5px_rgb(0_0_0_/_15%)]">
+                  <a href="https://wa.me/554188815706" target="_blank" rel="noopener noreferrer" className="bg-transparent text-white border-2 border-white py-4 px-8 btn-wpp hover:bg-neongreen hover:text-white hover:border-neongreen shadow-sm transition-all duration-300 rounded-sm">
                     <i className="fab fa-whatsapp text-2xl"></i>
                     <span>Solicite uma simulação GRÁTIS!</span>
                   </a>

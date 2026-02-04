@@ -7,7 +7,7 @@ const Prevention = () => {
  
 
   return (
-    <section className="pt-20 bg-background">
+    <section className="pt-20 bg-background portrait:pt-12">
       <div className="container mx-auto portrait:px-0">
 
 
@@ -34,7 +34,7 @@ const Prevention = () => {
                 <span>Ver todos os modelos</span>
               </a>*/}
 
-              <a  href="https://wa.me/5541999631609" target="_blank" rel="noopener noreferrer" className="bg-transparent text-neongreen border-2 border-neongreen py-4 px-4 btn-wpp hover:bg-neongreen hover:text-white hover:border-neongreen shadow-sm transition-all duration-300 [box-shadow:0px_5px_5px_rgb(0_0_0_/_15%)]">
+              <a  href="https://wa.me/554188815706" target="_blank" rel="noopener noreferrer" className="bg-transparent text-neongreen border-2 border-neongreen py-4 px-4 btn-wpp hover:bg-neongreen hover:text-white hover:border-neongreen shadow-xl transition-all duration-300">
                 <i className="fab fa-whatsapp text-2xl"></i>
                 <span>Solicite uma simulação GRÁTIS!</span>
               </a>

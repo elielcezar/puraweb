@@ -127,14 +127,14 @@ const Services = () => {
         <div className="flex justify-center gap-4 mt-6 lg:hidden">
           <button
             onClick={scrollPrev}
-            className="w-10 h-10 bg-accent text-accent-foreground bg-deepgray/70 border-2 border-white shadow-lg hover:bg-accent/90 transition-all duration-300 flex items-center justify-center"
+            className="w-10 h-10 bg-deepgray text-accent-foreground bg-deepgray/70 border-2 border-white shadow-lg hover:bg-neongreen/90 transition-all duration-300 flex items-center justify-center"
             aria-label="Anterior"
           >
             <ChevronLeft className="w-5 h-5" />
           </button>
           <button
             onClick={scrollNext}
-            className="w-10 h-10 bg-accent text-accent-foreground bg-deepgray/70 border-2 border-white shadow-lg hover:bg-accent/90 transition-all duration-300 flex items-center justify-center"
+            className="w-10 h-10 bg-deepgray text-accent-foreground bg-deepgray/70 border-2 border-white shadow-lg hover:bg-neongreen/90 transition-all duration-300 flex items-center justify-center"
             aria-label="Próximo"
           >
             <ChevronRight className="w-5 h-5" />
@@ -150,7 +150,7 @@ const Services = () => {
           <span>Veja todos os modelos</span>
         </a>*/}
 
-        <a href="https://wa.me/5541999631609" target="_blank" rel="noopener noreferrer" className="py-4 px-4 btn-wpp bg-transparent border-2 border-neongreen hover:text-white hover:bg-neongreen hover:border-neongreen hover:shadow-[0px_5px_25px_rgb(23_207_198_/_50%)] transition-all duration-300 portrait:w-full portrait:bg-neongreen">
+        <a href="https://wa.me/554188815706" target="_blank" rel="noopener noreferrer" className="py-4 px-4 btn-wpp bg-transparent border-2 border-neongreen hover:text-white hover:bg-neongreen hover:border-neongreen hover:shadow-[0px_5px_25px_rgb(23_207_198_/_50%)] transition-all duration-300 portrait:w-full portrait:bg-neongreen">
           <i className="fab fa-whatsapp text-2xl"></i>
           <span>Solicite uma simulação GRÁTIS!</span>
         </a>

@@ -535,7 +535,7 @@ app/page.tsx
 ```typescript
 // utils/helpers.ts
 export function openWhatsApp(message: string = 'Olá!') {
-  window.open(`https://wa.me/5541999631609?text=${encodeURIComponent(message)}`, '_blank');
+  window.open(`https://wa.me/554188815706?text=${encodeURIComponent(message)}`, '_blank');
 }
 ```
 

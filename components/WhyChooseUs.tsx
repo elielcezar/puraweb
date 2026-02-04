@@ -9,7 +9,7 @@ const WhyChooseUs = () => {
   return (
     <section
       id="sobre"
-      className="why-choose-us-bg py-20"
+      className="why-choose-us-bg py-20 portrait:pb-10"
       style={{ ['--why-choose-us-bg' as string]: `url(${process.env.NEXT_PUBLIC_BASE_PATH || ''}/img_88.jpg)` }}
     >
       <div className="container mx-auto px-4 flex portrait:flex-col gap-12">       
@@ -34,7 +34,7 @@ const WhyChooseUs = () => {
               <strong className="text-deepgray">Sites feitos para converter:</strong> utilizamos modelos pré-construídos, testados e validados para todos os tipos de negócio. 
             </p>          
             <p className="text-[1.15rem] text-deepgray font-normal mb-4 portrait:text-md">            
-              Nosso processo de criação simplificado reúne agilidade e eficiência para entregar resultados reais. Aqui você pode ter a certeza de que seu site será entregue no prazo e com a qualidade que você precisa.
+              <strong>Agilidade e eficiência:</strong> aqui você pode ter a certeza de que seu site será entregue no prazo e com a qualidade que você precisa.
             </p>
 
             <p className="text-[1.15rem] text-deepgray font-normal mb-4 portrait:text-md">     
@@ -44,16 +44,16 @@ const WhyChooseUs = () => {
         </motion.div>
 
         <motion.div 
-          className="flex-1 max-w-lg flex items-center justify-center relative overflow-hidden shadow-xl portrait:hidden"
+          className="flex-1 max-w-lg flex items-center justify-center relative overflow-hidden shadow-xl portrait:hidden rounded-2xl"
           initial={{ opacity: 0, x: 60 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >        
           <img 
-            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/img01.jpg`}
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/why/w05.jpg`}
             alt="About" 
-            className="absolute inset-0 w-full object-cover rounded-sm"
+            className="absolute inset-0 w-full object-cover rounded-2xl"
           />
         </motion.div>
                 

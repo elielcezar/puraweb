@@ -11,6 +11,10 @@ import {
 const FAQ = () => {
   const faqs = [
     {
+      question: "Como funciona?",
+      answer: "Basta nos chamar pelo WhatsApp. Nosso time de atendimento vai conhecer melhor seu negócio e o que você precisa para o seu site. Após isso, vamos preprar um orçamento e sugestões de design que atendem suas necessidades, já fazendo uma rápida simulação de como ficaria o site com a sua marca e cores. Tudo isso de forma gratuita e sem compromisso."
+    },
+    {
       question: "Quanto tempo leva para criar um site?",
       answer: "O prazo varia dependendo da complexidade de cada projeto. Sites institucionais simples geralmente ficam prontos entre 3 a 5 dias, enquanto projetos mais elaborados podem levar até 1 mês."
     },
@@ -24,16 +28,12 @@ const FAQ = () => {
     },
     {
       question: "Posso fazer alterações depois?",
-      answer: "Claro! Após a entrega, você pode solicitar ajustes e atualizações. Oferecemos pacotes de manutenção mensal ou você pode contratar alterações pontuais conforme sua necessidade."
+      answer: "Claro! Após a entrega, você pode solicitar ajustes e atualizações. Também oferecemos pacotes de manutenção mensal ou você pode contratar alterações pontuais no futuro conforme sua necessidade."
     },
     {
       question: "O que está incluído no investimento?",
       answer: "Nosso pacote inclui: design personalizado, desenvolvimento responsivo, otimização para SEO, integração com WhatsApp, configuração de domínio e hospedagem, formulário de contato e treinamento básico para gerenciar o site."
-    },
-    {
-      question: "Preciso contratar hospedagem e domínio separadamente?",
-      answer: "Não! Cuidamos de tudo para você. A configuração de domínio e hospedagem está incluída no nosso serviço. Você só precisa renovar anualmente o domínio e a hospedagem, e te ajudamos com isso também."
-    },
+    },   
     {
       question: "O site terá integração com redes sociais?",
       answer: "Sim! Integramos seu site com todas as redes sociais que você utiliza: Instagram, Facebook, WhatsApp, LinkedIn, YouTube e outras. Também podemos adicionar feed do Instagram e botões de compartilhamento."
@@ -45,7 +45,7 @@ const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="py-20 bg-slate-50">
+    <section id="faq" className="py-20 bg-slate-50 portrait:py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start portrait:grid-cols-1">
           
@@ -72,7 +72,7 @@ const FAQ = () => {
             {/* CTA WhatsApp */}
             <div className="mt-8">
               <a 
-                href="https://wa.me/5541999631609" 
+                href="https://wa.me/554188815706" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="btn-wpp inline-flex bg-neongreen border-neongreen portrait:w-full shadow-xl"
@@ -90,7 +90,7 @@ const FAQ = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <Accordion type="single" collapsible className="space-y-4">
+            <Accordion type="single" collapsible defaultValue="item-0" className="space-y-4">
               {faqs.map((faq, index) => (
                 <AccordionItem 
                   key={index} 
@@ -98,7 +98,7 @@ const FAQ = () => {
                   className="bg-white rounded-sm border border-border overflow-hidden shadow-md"
                 >
                   <AccordionTrigger className="px-6 py-4 text-left hover:no-underline hover:bg-deepgray hover:text-white transition-all duration-300 data-[state=open]:bg-deepgray data-[state=open]:text-white data-[state=open]:hover:bg-deepgray">
-                    <span className="text-lg font-semibold pr-4">
+                    <span className="text-lg font-semibold pr-4 leading-tight">
                       {faq.question}
                     </span>
                   </AccordionTrigger>

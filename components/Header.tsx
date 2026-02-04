@@ -65,7 +65,7 @@ const Header = () => {
                 alt="Logo" 
                 width="121" 
                 height="57" 
-                className="mt-[-16px] portrait:w-[100px] portrait:h-[47px]"              
+                className="mt-[-16px] portrait:w-[100px] portrait:h-[47px] portrait:ml-[-10px]"              
               />
             </div>
            
@@ -84,8 +84,8 @@ const Header = () => {
               </Link>                                      
             </nav>          
             <div className="landscape:w-[20%] flex justify-end">
-              <Link href="https://wa.me/554188815706" target="_blank" rel="noopener noreferrer" className="w-[210px] flex items-center gap-2 text-white text-md font-bold transition-colors bg-neongreen hover:bg-deepgray px-4 py-2 rounded-full border-2 border-neongreen hover:border-white portrait:py-1 portrait:px-3 portrait:mr-9 portrait:w-[183px] portrait:text-[14px]">      
-                Orçamento Rápido <Send className="w-5 h-5" />
+              <Link href="https://wa.me/554188815706" target="_blank" rel="noopener noreferrer" className="landscape:w-[210px] flex items-center gap-2 text-white text-md font-bold transition-colors bg-neongreen hover:bg-deepgray px-4 py-2 rounded-full border-2 border-neongreen hover:border-white portrait:py-1 portrait:px-3 portrait:mr-9 portrait:text-[14px]">      
+                Orçamento Rápido <Send className="w-5 h-5 portrait:hidden" />
               </Link>
             </div>
           </div>
@@ -120,6 +120,13 @@ const Header = () => {
               <aside
                 className={`fixed left-0 top-0 bottom-0 w-[85vw] min-w-[280px] bg-background shadow-xl z-[210] flex flex-col overflow-y-auto ${isClosing ? "drawer-slide-out" : "drawer-slide-in"}`}
                 role="dialog"
+                style={{ 
+                  backgroundImage: `url(${process.env.NEXT_PUBLIC_BASE_PATH || ''}/mobile-menu-texture.png)`,
+                  backgroundSize: '100% auto',
+                  backgroundPosition: 'bottom left',
+                  backgroundRepeat: 'no-repeat',
+                  
+                }}
                 aria-label="Menu de navegação"
               >
                 <div className="bg-deepgray flex items-center justify-center h-[140px] mb-2 border-b-[15px] border-neongreen">

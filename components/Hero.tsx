@@ -98,13 +98,13 @@ const Services = () => {
               <div className="flex items-center justify-center flex-col p-6 transition-all duration-300 h-full w-full relative z-10">
                 <motion.h3 
                   {...animProps(0, 1)}
-                  className="text-[56px] text-white font-pacifico mb-[-10px] portrait:text-[7vw]"
+                  className="text-[56px] text-white text-center font-pacifico landscape:mb-[-20px] portrait:text-[12vw] portrait:leading-[12vw] portrait:[text-shadow:5px_5px_5px_rgba(0,0,0,0.5)]"
                 >
                   Sua marca com muito mais
                 </motion.h3>
                 <motion.p 
                   {...animProps(0, 2)}
-                  className="text-[140px] text-white font-oswald mt-0 font-bold tracking-tight leading-tight portrait:text-[18vw]" 
+                  className="text-[140px] text-white font-oswald mt-0 font-bold tracking-tight leading-tight portrait:text-[24vw] portrait:[text-shadow:5px_5px_5px_rgba(0,0,0,0.5)]" 
                   style={{ textShadow: '5px 5px 5px rgba(0, 0, 0, 0.15)', letterSpacing: '-3px' }}
                 >
                   IMPACTO
@@ -135,13 +135,13 @@ const Services = () => {
 
                 <motion.h3 
                   {...animProps(1, 1)}
-                  className="text-[56px] text-neongreen font-pacifico mb-[-10px] portrait:text-[7vw]"
+                  className="text-[56px] text-neongreen font-pacifico text-center mb-[-10px] portrait:text-[10vw] portrait:leading-[12vw]"
                 >
                   Mais cliques, mais
                 </motion.h3>
                 <motion.p 
                   {...animProps(1, 2)}
-                  className="text-[140px] text-white font-oswald mt-0 font-bold tracking-tight leading-tight portrait:text-[18vw]" 
+                  className="text-[140px] text-white font-oswald mt-0 font-bold tracking-tight leading-tight portrait:text-[24vw]" 
                   style={{ textShadow: '5px 5px 5px rgba(0, 0, 0, 0.15)', letterSpacing: '-3px' }}
                 >
                   VENDAS
@@ -164,7 +164,7 @@ const Services = () => {
 
                   <a href="https://wa.me/554188815706" target="_blank" rel="noopener noreferrer" className="bg-transparent text-white border-2 border-white py-4 px-8 btn-wpp hover:bg-neongreen hover:text-white hover:border-neongreen shadow-sm transition-all duration-300 rounded-sm">
                     <i className="fab fa-whatsapp text-2xl"></i>
-                    <span>Solicite uma simulação GRÁTIS!</span>
+                    <span>Teste GRÁTIS!</span>
                   </a>
                 </motion.div>
 
@@ -186,13 +186,13 @@ const Services = () => {
               <div className="flex items-center justify-center flex-col p-6 transition-all duration-300 h-full w-full relative z-10">
                 <motion.h3 
                   {...animProps(2, 1)}
-                  className="text-[56px] text-white font-pacifico mb-[-10px] portrait:text-[7vw]"
+                  className="text-[56px] text-white font-pacifico mb-[-10px] portrait:text-[10vw] portrait:leading-[14vw]"
                 >
                   Nosso foco é o
                 </motion.h3>
                 <motion.p 
                   {...animProps(2, 2)}
-                  className="text-[140px] text-white font-oswald mt-0 font-bold tracking-tight leading-tight portrait:text-[18vw]" 
+                  className="text-[140px] text-white font-oswald mt-0 font-bold tracking-tight leading-tight portrait:text-[16vw]" 
                   style={{ textShadow: '5px 5px 5px rgba(0, 0, 0, 0.15)', letterSpacing: '-3px' }}
                 >
                   DESEMPENHO

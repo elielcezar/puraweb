@@ -12,7 +12,7 @@ const FAQ = () => {
   const faqs = [
     {
       question: "Como funciona?",
-      answer: "Basta nos chamar pelo WhatsApp. Nosso time de atendimento vai conhecer melhor seu negócio e o que você precisa para o seu site. Após isso, vamos preprar um orçamento e sugestões de design que atendem suas necessidades, já fazendo uma rápida simulação de como ficaria o site com a sua marca e cores. Tudo isso de forma gratuita e sem compromisso."
+      answer: "Basta nos chamar pelo WhatsApp. Nosso time de atendimento vai conhecer melhor seu negócio e o que você precisa para o seu site. Em seguida, vamos enviar o orçamento e sugestões de design que atendem suas necessidades, já fazendo uma rápida simulação de como ficaria o site com a sua marca e cores. Tudo isso de forma gratuita e sem compromisso."
     },
     {
       question: "Quanto tempo leva para criar um site?",

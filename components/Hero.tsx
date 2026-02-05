@@ -111,7 +111,7 @@ const Services = () => {
                 </motion.p>
                 <motion.p 
                   {...animProps(0, 3)}
-                  className="text-white text-3xl font-normal portrait:text-xl text-center"
+                  className="text-white text-3xl font-normal portrait:text-xl text-center portrait:font-bold portrait:[text-shadow:2px_2px_2px_rgba(0,0,0,0.5)]"
                 >
                   Atraia clientes qualificados com um site feito para converter
                 </motion.p>
@@ -155,14 +155,14 @@ const Services = () => {
                 {/* CTA WhatsApp */}
                 <motion.div 
                   {...animProps(1, 4)}
-                  className="flex justify-center gap-8 w-full max-w-[700px] mx-auto mt-10 portrait:flex-col portrait:gap-4 portrait:w-full"
+                  className="flex justify-center gap-8 w-full max-w-[700px] mx-auto mt-6 portrait:flex-col portrait:gap-4 portrait:w-full"
                 >
                   {/*<a href="#" target="_blank" rel="noopener noreferrer" className="bg-transparent text-white border-2 border-white py-4 px-8 btn-wpp hover:bg-white hover:text-deepgray hover:border-white transition-all duration-300 [box-shadow:0px_5px_5px_rgb(0_0_0_/_15%)]">
                     <i className="fa-regular fa-pen-to-square text-2xl"></i>
                     <span>Ver todos os modelos</span>
                   </a>*/}
 
-                  <a href="https://wa.me/554188815706" target="_blank" rel="noopener noreferrer" className="bg-transparent text-white border-2 border-white py-4 px-8 btn-wpp hover:bg-neongreen hover:text-white hover:border-neongreen shadow-sm transition-all duration-300 rounded-sm">
+                  <a href="https://wa.me/554188815706" target="_blank" rel="noopener noreferrer" className="bg-transparent text-white border-2 border-white py-4 px-6 btn-wpp hover:bg-neongreen hover:text-white hover:border-neongreen shadow-sm transition-all duration-300 rounded-sm">
                     <i className="fab fa-whatsapp text-2xl"></i>
                     <span>Teste GRÁTIS!</span>
                   </a>
@@ -203,6 +203,22 @@ const Services = () => {
                 >
                   Para você atrair mais clientes
                 </motion.p>
+
+                {/* CTA WhatsApp */}
+                <div 
+                  {...animProps(1, 4)}
+                  className="flex justify-center gap-8 w-full max-w-[700px] mx-auto mt-10 portrait:flex-col portrait:gap-4 portrait:w-full"
+                >
+                  {/*<a href="#" target="_blank" rel="noopener noreferrer" className="bg-transparent text-white border-2 border-white py-4 px-8 btn-wpp hover:bg-white hover:text-deepgray hover:border-white transition-all duration-300 [box-shadow:0px_5px_5px_rgb(0_0_0_/_15%)]">
+                    <i className="fa-regular fa-pen-to-square text-2xl"></i>
+                    <span>Ver todos os modelos</span>
+                  </a>*/}
+                  <a href="https://wa.me/554188815706" target="_blank" rel="noopener noreferrer" className="bg-transparent text-white border-2 border-white py-4 px-6 btn-wpp hover:bg-neongreen hover:text-white hover:border-neongreen shadow-sm transition-all duration-300 rounded-sm portrait:font-bold">
+                    <i className="fab fa-whatsapp text-2xl"></i>
+                    <span>Orçamento RÁPIDO!</span>
+                  </a>
+                </div>
+
               </div>
             </div>
           </div>

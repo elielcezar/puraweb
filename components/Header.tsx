@@ -84,7 +84,7 @@ const Header = () => {
               </Link>                                      
             </nav>          
             <div className="landscape:w-[20%] flex justify-end">
-              <Link href="https://wa.me/554188815706" target="_blank" rel="noopener noreferrer" className="landscape:w-[210px] flex items-center gap-2 text-white text-md font-bold transition-colors bg-neongreen hover:bg-deepgray px-4 py-2 rounded-full border-2 border-neongreen hover:border-white portrait:py-1 portrait:px-3 portrait:mr-9 portrait:text-[14px]">      
+              <Link href="https://wa.me/554199631609" target="_blank" rel="noopener noreferrer" className="landscape:w-[210px] flex items-center gap-2 text-white text-md font-bold transition-colors bg-neongreen hover:bg-deepgray px-4 py-2 rounded-full border-2 border-neongreen hover:border-white portrait:py-1 portrait:px-3 portrait:mr-9 portrait:text-[14px]">      
                 Orçamento Rápido <Send className="w-5 h-5 portrait:hidden" />
               </Link>
             </div>
@@ -163,7 +163,7 @@ const Header = () => {
                   </Link>
 
                   <Link 
-                    href="https://wa.me/554188815706" 
+                    href="https://wa.me/554199631609" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-foreground font-semibold py-6 px-6 hover:bg-muted transition-colors uppercase text-sm border-b border-deepgray/20 flex items-center gap-2"

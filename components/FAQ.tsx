@@ -72,7 +72,7 @@ const FAQ = () => {
             {/* CTA WhatsApp */}
             <div className="mt-8">
               <a 
-                href="https://wa.me/554188815706" 
+                href="https://wa.me/554199631609" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="btn-wpp inline-flex bg-neongreen border-neongreen portrait:w-full shadow-xl"

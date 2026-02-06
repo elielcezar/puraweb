@@ -162,7 +162,7 @@ const Services = () => {
                     <span>Ver todos os modelos</span>
                   </a>*/}
 
-                  <a href="https://wa.me/554188815706" target="_blank" rel="noopener noreferrer" className="bg-transparent text-white border-2 border-white py-4 px-6 btn-wpp hover:bg-neongreen hover:text-white hover:border-neongreen shadow-sm transition-all duration-300 rounded-sm">
+                  <a href="https://wa.me/554199631609" target="_blank" rel="noopener noreferrer" className="bg-transparent text-white border-2 border-white py-4 px-6 btn-wpp hover:bg-neongreen hover:text-white hover:border-neongreen shadow-sm transition-all duration-300 rounded-sm">
                     <i className="fab fa-whatsapp text-2xl"></i>
                     <span>Teste GRÁTIS!</span>
                   </a>
@@ -213,7 +213,7 @@ const Services = () => {
                     <i className="fa-regular fa-pen-to-square text-2xl"></i>
                     <span>Ver todos os modelos</span>
                   </a>*/}
-                  <a href="https://wa.me/554188815706" target="_blank" rel="noopener noreferrer" className="bg-transparent text-white border-2 border-white py-4 px-6 btn-wpp hover:bg-neongreen hover:text-white hover:border-neongreen shadow-sm transition-all duration-300 rounded-sm portrait:font-bold">
+                  <a href="https://wa.me/554199631609" target="_blank" rel="noopener noreferrer" className="bg-transparent text-white border-2 border-white py-4 px-6 btn-wpp hover:bg-neongreen hover:text-white hover:border-neongreen shadow-sm transition-all duration-300 rounded-sm portrait:font-bold">
                     <i className="fab fa-whatsapp text-2xl"></i>
                     <span>Orçamento RÁPIDO!</span>
                   </a>

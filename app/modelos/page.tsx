@@ -111,7 +111,7 @@ export default function ModelosPage() {
 
            {/* CTA WhatsApp */}
             <div className="flex justify-center gap-8 w-full max-w-[700px] mx-auto mt-10">             
-              <a  href="https://wa.me/554188815706" target="_blank" rel="noopener noreferrer" className="py-4 px-8 btn-wpp bg-transparent border-3 border-neongreen hover:text-white hover:bg-neongreen hover:border-neongreen shadow-[0px_5px_25px_rgb(23_207_198_/_50%)] transition-all duration-300 hover:bg-neongreen/90">
+              <a  href="https://wa.me/554199631609" target="_blank" rel="noopener noreferrer" className="py-4 px-8 btn-wpp bg-transparent border-3 border-neongreen hover:text-white hover:bg-neongreen hover:border-neongreen shadow-[0px_5px_25px_rgb(23_207_198_/_50%)] transition-all duration-300 hover:bg-neongreen/90">
                 <i className="fab fa-whatsapp text-2xl"></i>
                 <span>Solicite uma simulação GRÁTIS!</span>
               </a>

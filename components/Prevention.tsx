@@ -34,7 +34,7 @@ const Prevention = () => {
                 <span>Ver todos os modelos</span>
               </a>*/}
 
-              <a  href="https://wa.me/554188815706" target="_blank" rel="noopener noreferrer" className="bg-transparent text-neongreen border-2 border-neongreen py-4 px-4 btn-wpp hover:bg-neongreen hover:text-white hover:border-neongreen shadow-xl transition-all duration-300">
+              <a  href="https://wa.me/554199631609" target="_blank" rel="noopener noreferrer" className="bg-transparent text-neongreen border-2 border-neongreen py-4 px-4 btn-wpp hover:bg-neongreen hover:text-white hover:border-neongreen shadow-xl transition-all duration-300">
                 <i className="fab fa-whatsapp text-2xl"></i>
                 <span>Solicite uma simulação GRÁTIS!</span>
               </a>
